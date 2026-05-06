@@ -43,6 +43,12 @@ Das methodische Vorgehen orientiert sich aber an eKlausur:
 Für Läufe bitte diesen Interpreter nutzen:
 `/Users/wiggel/Python/eKlausur2/.venv/bin/python`
 
+## Modell-Download & Smoke-Test (macOS)
+
+- Download nach `/Users/wiggel/Python/eKlausur2/tmp_models/best.pt`
+- Test mit `/Users/wiggel/Python/eKlausur2/.venv/bin/python` (Torch 2.11.0) über `run_yolov5_recognition.py`
+- Hinweis: Anfangs gab’s das bekannte Windows→macOS-Problem (WindowsPath im Checkpoint). `run_yolov5_recognition.py` wurde so gepatcht, dass `torch.load` bei WindowsPath automatisch retryt (WindowsPath→PosixPath).
+
 ## GitHub Zugriff (SSH + GH CLI)
 
 SSH fuer GitHub ist eingerichtet.
