@@ -42,3 +42,25 @@ Das methodische Vorgehen orientiert sich aber an eKlausur:
 
 Für Läufe bitte diesen Interpreter nutzen:
 `/Users/wiggel/Python/eKlausur2/.venv/bin/python`
+
+## GitHub Zugriff (SSH + GH CLI)
+
+SSH fuer GitHub ist eingerichtet.
+Test:
+
+```powershell
+ssh -T git@github.com
+```
+
+Erwartete Rueckmeldung:
+`Hi grabow! You've successfully authenticated, but GitHub does not provide shell access.`
+
+GitHub CLI ist installiert unter:
+`C:\Program Files\GitHub CLI\gh.exe`
+
+Falls `gh` im aktuellen Terminal nicht gefunden wird, ein neues Terminal oeffnen
+oder direkt aufrufen:
+
+```powershell
+& "C:\Program Files\GitHub CLI\gh.exe" --version
+```
