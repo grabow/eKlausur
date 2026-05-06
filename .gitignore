@@ -1,0 +1,38 @@
+# Keep sensitive data out of git
+/data/**
+!/data/README.md
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtualenvs
+.venv/
+venv/
+ENV/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Logs / outputs
+*.log
+
+# YOLOv5 outputs and caches (generated during training/inference)
+rtx3090_training_bundle/yolov5/runs/
+rtx3090_training_bundle/yolov5/**/wandb/
+rtx3090_training_bundle/yolov5/**/mlruns/
+rtx3090_training_bundle/yolov5/**/*.cache
+
+# Training data inside the bundle (should not be pushed)
+rtx3090_training_bundle/data/
+*.zip
+
+# Local scratch
+.tmp_eval_*/
