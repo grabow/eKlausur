@@ -49,6 +49,37 @@ Für Läufe bitte diesen Interpreter nutzen:
 - Test mit `/Users/wiggel/Python/eKlausur2/.venv/bin/python` (Torch 2.11.0) über `run_yolov5_recognition.py`
 - Hinweis: Anfangs gab’s das bekannte Windows→macOS-Problem (WindowsPath im Checkpoint). `run_yolov5_recognition.py` wurde so gepatcht, dass `torch.load` bei WindowsPath automatisch retryt (WindowsPath→PosixPath).
 
+## YOLOv26 Training (deterministisch)
+
+Zusätzlich zur YOLOv5-Pipeline gibt es im Repo ein zweites Trainingsskript:
+
+- `/Users/wiggel/Python/eKlausur2/train_model_v26.py`
+
+Eigenschaften:
+- gleicher deterministischer Split-Workflow (Seed, `split_manifest_seed.txt`)
+- automatische Runtime-Data-YAML auf Basis des aktuellen Splits
+- Training über Ultralytics-API mit `--model yolo26m.pt` oder `--model yolo26l.pt`
+
+Beispiel (macOS/Local):
+
+```bash
+/Users/wiggel/Python/eKlausur2/.venv312/bin/python /Users/wiggel/Python/eKlausur2/train_model_v26.py \
+  --dataset-dir /Users/wiggel/Python/eKlausurData/YoloMultiClassGenerated \
+  --image-ext .png \
+  --split-percentage 90 \
+  --seed 42 \
+  --data-config /Users/wiggel/Python/eKlausur2/dataset_hg_multiclass_meta.yaml \
+  --model yolo26m.pt \
+  --imgsz 640 \
+  --epochs 20 \
+  --batch 16 \
+  --device 0
+```
+
+Hinweis:
+- fuer rein reproduzierbare Publikationslaeufe immer `--seed` dokumentieren
+- fuer Vergleichslaufe `yolo26m.pt` und `yolo26l.pt` mit identischem Split/Seed ausfuehren
+
 ## GitHub Zugriff (SSH + GH CLI)
 
 SSH fuer GitHub ist eingerichtet.
