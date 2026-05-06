@@ -151,7 +151,19 @@ def main() -> int:
     def patched_torch_load(*load_args, **load_kwargs):
         if "weights_only" not in load_kwargs:
             load_kwargs["weights_only"] = False
-        return orig_torch_load(*load_args, **load_kwargs)
+        try:
+            return orig_torch_load(*load_args, **load_kwargs)
+        except Exception as ex:
+            # Cross-platform checkpoint compatibility:
+            # Windows-trained checkpoints may pickle pathlib.WindowsPath objects which cannot be
+            # instantiated on POSIX systems. If detected, patch WindowsPath to PosixPath and retry.
+            if "WindowsPath" not in str(ex):
+                raise
+            import pathlib
+
+            if getattr(pathlib, "WindowsPath", None) is not None:
+                pathlib.WindowsPath = pathlib.PosixPath  # type: ignore[attr-defined]
+            return orig_torch_load(*load_args, **load_kwargs)
 
     torch.load = patched_torch_load
 
