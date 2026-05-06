@@ -21,6 +21,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--weights", default="yolov5s.pt", help="Initial weights.")
     parser.add_argument("--hyp", default="hyp_hg_table.yaml", help="Hyperparameter yaml.")
     parser.add_argument("--epochs", type=int, default=20, help="Number of epochs.")
+    parser.add_argument("--patience", type=int, default=100, help="Early stopping patience (epochs).")
     parser.add_argument("--batch", type=int, default=-1, help="YOLO batch arg (-1=autobatch).")
     parser.add_argument("--device", default="", help="Training device, e.g. '', 'cpu', 'mps', '0'.")
     parser.add_argument("--noval", action="store_true", help="Skip validation during training.")
@@ -179,6 +180,7 @@ def main() -> int:
         weights=args.weights,
         hyp=args.hyp,
         epochs=args.epochs,
+        patience=args.patience,
         batch=args.batch,
         device=args.device,
         seed=args.seed,
