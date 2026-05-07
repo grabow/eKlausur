@@ -150,3 +150,9 @@ gh release upload <tag> /tmp/yolov5m_20260506_best.pt --repo grabow/eKlausur
 gh release delete-asset <tag> best.pt --repo grabow/eKlausur --yes
 gh release upload <tag> /tmp/yolov5m_20260506_best.pt --repo grabow/eKlausur
 ```
+
+## Ergebnis-Konvention
+
+Die verbindliche Ablage-, Benennungs- und Bewertungslogik fuer Inferenz-Ergebnisse steht in:
+
+- `/Users/wiggel/Python/eKlausur2/results_convention.md`
