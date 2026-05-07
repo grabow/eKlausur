@@ -8,7 +8,7 @@ Methodische Referenz:
 
 - Datensammlung/-aufbereitung fuer Evaluation
 - Modellentraining (YOLOv5, YOLO26)
-- Reproduzierbare Inferenz und tokenbasierte Auswertung
+- Reproduzierbare Inferenz und tokenbasierte Auswertung (YOLO + Foundation-Modelle)
 
 ## Laufzeit-Hinweise
 
@@ -16,6 +16,9 @@ Methodische Referenz:
   - `/Users/wiggel/Python/eKlausur2/.venv/bin/python`
 - V26-Training typischerweise mit:
   - `/Users/wiggel/Python/eKlausur2/.venv312/bin/python`
+- API-Keys (nur diese Quelle):
+  - `/Users/wiggel/Python/eKlausur2/.env`
+  - `run_llm_recognition.py` nutzt ausschliesslich `.env` (kein `credentials.txt`-Fallback)
 
 ## Doku
 

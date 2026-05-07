@@ -23,6 +23,8 @@ Thumbs.db
 
 # Logs / outputs
 *.log
+.env
+.env.*
 
 # YOLO outputs and experiment logs
 runs/

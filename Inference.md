@@ -7,6 +7,12 @@ Dieses Dokument beschreibt den standardisierten Inferenzlauf und die Ergebnisbew
 Fuer Inferenzlaeufe verwenden:
 - `/Users/wiggel/Python/eKlausur2/.venv/bin/python`
 
+## API-Keys (autark in eKlausur2)
+
+- Lokale Keys liegen in:
+  - `/Users/wiggel/Python/eKlausur2/.env`
+- `run_llm_recognition.py` laedt diese Datei automatisch (Parameter `--env-file`, Default `.env`).
+
 ## Referenzprojekt
 
 Die fachliche Referenz bleibt:
@@ -16,6 +22,7 @@ Die fachliche Referenz bleibt:
 
 - `/Users/wiggel/Python/eKlausur2/run_yolov5_recognition.py`
 - `/Users/wiggel/Python/eKlausur2/run_yolo26_recognition.py`
+- `/Users/wiggel/Python/eKlausur2/run_llm_recognition.py`
 
 Wichtige Parameter:
 - `--dataset-root` (z. B. `data/dataset`)
@@ -29,6 +36,32 @@ YOLOv5-spezifisch:
 YOLO26-spezifisch:
 - `run_yolo26_recognition.py` nutzt Ultralytics direkt
 - zusaetzlich: `--conf`, `--iou`, `--imgsz`, `--max-det`, `--line-y-ratio`, `--device`
+
+LLM-spezifisch:
+- `run_llm_recognition.py` nutzt denselben Foundation-Model-Stack wie eKlausur (`recognizer.copy_blurr_resize` + `recognizer.recognize`)
+- Provider waehlen: `--provider openai|gemini|openrouter|academiccloud|ollama`
+- Konkretes Modell waehlen: `--provider-model <modellname>`
+- Dataset-Auswahl: `--dataset-id 1` (mehrfach moeglich)
+- zusaetzlich: `--prompt-index`, `--expected-mode`, `--raw-json-dir`, `--log-file`
+
+Beispiele:
+```bash
+/Users/wiggel/Python/eKlausur2/.venv/bin/python /Users/wiggel/Python/eKlausur2/run_llm_recognition.py \
+  --dataset-root /Users/wiggel/Python/eKlausur2/data/dataset \
+  --dataset-id 1 \
+  --provider openai \
+  --provider-model gpt-5.2-2025-12-11 \
+  --output-name recognition_llm_openai.txt
+```
+
+```bash
+/Users/wiggel/Python/eKlausur2/.venv/bin/python /Users/wiggel/Python/eKlausur2/run_llm_recognition.py \
+  --dataset-root /Users/wiggel/Python/eKlausur2/data/dataset \
+  --dataset-id 1 \
+  --provider gemini \
+  --provider-model gemini-2.5-flash \
+  --output-name recognition_llm_gemini.txt
+```
 
 ## Modellablage fuer Inferenz
 
