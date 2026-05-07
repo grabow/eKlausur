@@ -20,7 +20,7 @@ Wir wollen die Erkennungsleistung verschiedener Ansätze vergleichbar evaluieren
    - Anleitung/Beispiel: `data/README.md`
 
 2. **Python-Skripte schreiben**
-   - Skript für Datensammlung/Filterung (`collect_exam_data.py`).
+   - Skript für Datensammlung/Filterung (`Data Collection/collect_exam_data.py`).
    - Skript(e) für Erkennungsläufe (YOLO + Foundation Models) auf denselben Daten.
    - Optional Skript für Zwei-Stufen-Redundanz (Erkennung + Gegenprüfung durch zweites Modell).
 
