@@ -37,4 +37,5 @@ rtx3090_training_bundle/data/
 # Local scratch
 .tmp_eval_*/
 tmp_models/
+models_local/
 *.pt
