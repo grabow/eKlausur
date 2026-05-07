@@ -33,3 +33,8 @@ Methodische Referenz:
 ## Datensammlungsskripte
 
 - `/Users/wiggel/Python/eKlausur2/data_collector_scripts/collect_exam_data.py`
+
+## Windows-Runner (3090)
+
+- `/Users/wiggel/Python/eKlausur2/run_training_3090_v5.bat`
+- `/Users/wiggel/Python/eKlausur2/run_training_3090_v26.bat`

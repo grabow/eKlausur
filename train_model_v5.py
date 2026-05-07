@@ -1,25 +1,33 @@
-"""Deterministic train/validation split preparation and YOLOv5 training entrypoint."""
+#!/usr/bin/env python3
+"""Deterministic split preparation and YOLOv5 training entrypoint."""
+
+from __future__ import annotations
 
 import argparse
 import os
 import random
 import shutil
+import sys
 from pathlib import Path
 from typing import List, Tuple
 
-DEFAULT_DATASET_DIR = os.getenv("YOLO_HG_DATASET_DIR", "/workspace/eKlausurData/YoloMultiClassGenerated")
+
+DEFAULT_DATASET_DIR = os.getenv("YOLO_HG_DATASET_DIR", "/Users/wiggel/Python/eKlausurData/YoloMultiClassGenerated")
+DEFAULT_YOLO_ROOT = "/Users/wiggel/Python/py_yolo/yolov5"
+DEFAULT_DATA_CONFIG = "/Users/wiggel/Python/py_yolo/yolov5/dataset_hg_multiclass.yaml"
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Prepare deterministic train/val split and train YOLOv5.")
     parser.add_argument("--dataset-dir", default=DEFAULT_DATASET_DIR, help="Folder containing *.txt + image files.")
     parser.add_argument("--image-ext", default=".png", help="Image extension used in dataset-dir.")
-    parser.add_argument("--split-percentage", type=int, default=90, help="Train split percentage (0-100).")
+    parser.add_argument("--split-percentage", type=int, default=90, help="Train split percentage (1-99).")
     parser.add_argument("--seed", type=int, default=42, help="Global seed for split and training reproducibility.")
-    parser.add_argument("--data-config", default="dataset_hg_multiclass.yaml", help="YOLO data config yaml.")
+    parser.add_argument("--yolo-root", default=DEFAULT_YOLO_ROOT, help="YOLOv5 root containing train.py.")
+    parser.add_argument("--data-config", default=DEFAULT_DATA_CONFIG, help="YOLO data config yaml.")
     parser.add_argument("--imgsz", type=int, default=640, help="Train/val image size.")
-    parser.add_argument("--weights", default="yolov5s.pt", help="Initial weights.")
-    parser.add_argument("--hyp", default="hyp_hg_table.yaml", help="Hyperparameter yaml.")
+    parser.add_argument("--weights", default="yolov5m.pt", help="Initial weights.")
+    parser.add_argument("--hyp", default="hyp_hg_table.yaml", help="Hyperparameter yaml path/name.")
     parser.add_argument("--epochs", type=int, default=20, help="Number of epochs.")
     parser.add_argument("--patience", type=int, default=100, help="Early stopping patience (epochs).")
     parser.add_argument("--batch", type=int, default=-1, help="YOLO batch arg (-1=autobatch).")
@@ -68,15 +76,15 @@ def reset_split_dirs(dataset_dir: Path) -> Tuple[Path, Path, Path, Path]:
     if labels_path.exists():
         shutil.rmtree(labels_path)
 
-    training_images_path = images_path / "training"
-    validation_images_path = images_path / "validation"
-    training_labels_path = labels_path / "training"
-    validation_labels_path = labels_path / "validation"
-    training_images_path.mkdir(parents=True, exist_ok=True)
-    validation_images_path.mkdir(parents=True, exist_ok=True)
-    training_labels_path.mkdir(parents=True, exist_ok=True)
-    validation_labels_path.mkdir(parents=True, exist_ok=True)
-    return training_images_path, validation_images_path, training_labels_path, validation_labels_path
+    train_img_dir = images_path / "training"
+    val_img_dir = images_path / "validation"
+    train_lbl_dir = labels_path / "training"
+    val_lbl_dir = labels_path / "validation"
+    train_img_dir.mkdir(parents=True, exist_ok=True)
+    val_img_dir.mkdir(parents=True, exist_ok=True)
+    train_lbl_dir.mkdir(parents=True, exist_ok=True)
+    val_lbl_dir.mkdir(parents=True, exist_ok=True)
+    return train_img_dir, val_img_dir, train_lbl_dir, val_lbl_dir
 
 
 def copy_split(
@@ -116,24 +124,35 @@ def prepare_split(dataset_dir: Path, image_ext: str, split_percentage: int, seed
     if not samples:
         raise RuntimeError(f"No samples found in {dataset_dir} for image extension {image_ext}")
 
-    rng = random.Random(seed)
     shuffled = samples[:]
-    rng.shuffle(shuffled)
-
+    random.Random(seed).shuffle(shuffled)
     split_idx = int(split_percentage * len(shuffled) / 100)
     split_idx = max(1, min(split_idx, len(shuffled) - 1))
-    train_stems = shuffled[:split_idx]
-    val_stems = shuffled[split_idx:]
-    return train_stems, val_stems
+    return shuffled[:split_idx], shuffled[split_idx:]
+
+
+def resolve_yolo_path(path_or_name: str, yolo_root: Path) -> str:
+    p = Path(path_or_name)
+    if p.is_absolute():
+        return str(p)
+    return str((yolo_root / p).resolve())
 
 
 def main() -> int:
     args = parse_args()
     dataset_dir = Path(args.dataset_dir).expanduser().resolve()
+    yolo_root = Path(args.yolo_root).expanduser().resolve()
+    data_config = Path(args.data_config).expanduser()
+    data_config_resolved = data_config if data_config.is_absolute() else (yolo_root / data_config).resolve()
+
     if not dataset_dir.exists():
         raise FileNotFoundError(f"Dataset directory not found: {dataset_dir}")
+    if not yolo_root.exists():
+        raise FileNotFoundError(f"YOLO root not found: {yolo_root}")
     if args.split_percentage <= 0 or args.split_percentage >= 100:
         raise ValueError("--split-percentage must be between 1 and 99")
+    if not data_config_resolved.exists():
+        raise FileNotFoundError(f"Data config not found: {data_config_resolved}")
 
     set_global_seed(args.seed)
     train_stems, val_stems = prepare_split(dataset_dir, args.image_ext, args.split_percentage, args.seed)
@@ -172,13 +191,14 @@ def main() -> int:
 
     torch.load = patched_torch_load
 
-    import train
+    sys.path.insert(0, str(yolo_root))
+    import train  # type: ignore
 
     train.run(
-        data=args.data_config,
+        data=str(data_config_resolved),
         imgsz=args.imgsz,
         weights=args.weights,
-        hyp=args.hyp,
+        hyp=resolve_yolo_path(args.hyp, yolo_root),
         epochs=args.epochs,
         patience=args.patience,
         batch=args.batch,
@@ -191,3 +211,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

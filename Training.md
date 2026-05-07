@@ -18,6 +18,26 @@ Dieses Dokument beschreibt den Trainingsprozess fuer YOLOv5 und YOLO26.
 YOLOv5-Stack:
 - `/Users/wiggel/Python/py_yolo/yolov5`
 
+Trainingsskript (in diesem Repo):
+- `/Users/wiggel/Python/eKlausur2/train_model_v5.py`
+
+Beispiel (kurzer Testlauf):
+
+```bash
+/Users/wiggel/Python/eKlausur2/.venv/bin/python /Users/wiggel/Python/eKlausur2/train_model_v5.py \
+  --dataset-dir /Users/wiggel/Python/eKlausurData/YoloMultiClassGenerated \
+  --image-ext .png \
+  --split-percentage 90 \
+  --seed 42 \
+  --yolo-root /Users/wiggel/Python/py_yolo/yolov5 \
+  --data-config /Users/wiggel/Python/py_yolo/yolov5/dataset_hg_multiclass.yaml \
+  --weights yolov5m.pt \
+  --hyp hyp_hg_table.yaml \
+  --imgsz 640 \
+  --epochs 3 \
+  --batch -1
+```
+
 Bekannte lokale Runs:
 - `/Users/wiggel/Python/py_yolo/yolov5/runs/train/good_working_exp17/weights/best.pt`
 - `/Users/wiggel/Python/py_yolo/yolov5/runs/train/good_working_seed/weights/best.pt`
@@ -66,3 +86,12 @@ Beispiele:
 - `yolov5m_20260506_best.pt`
 - `yolo26m_20260507_best.pt`
 - `yolo26l_20260507_best.pt`
+
+## Windows 3090 Schnellstart
+
+Im Repo-Root liegen Runner-Skripte fuer Windows:
+- `/Users/wiggel/Python/eKlausur2/run_training_3090_v5.bat`
+- `/Users/wiggel/Python/eKlausur2/run_training_3090_v26.bat`
+
+Hinweis:
+- Vor dem Start die Pfade im jeweiligen `.bat` anpassen (`DATASET_DIR`, bei v5 auch `YOLO_ROOT`).

@@ -1,4 +1,0 @@
-train: /Users/wiggel/Python/eKlausurData/YoloMultiClassGenerated/images/training
-val: /Users/wiggel/Python/eKlausurData/YoloMultiClassGenerated/images/validation
-nc: 37
-names: [A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,f,x,D1,D2,D3,D4,D5,D6,D7,D8,D9]

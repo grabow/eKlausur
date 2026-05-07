@@ -24,14 +24,11 @@ Thumbs.db
 # Logs / outputs
 *.log
 
-# YOLOv5 outputs and caches (generated during training/inference)
-rtx3090_training_bundle/yolov5/runs/
-rtx3090_training_bundle/yolov5/**/wandb/
-rtx3090_training_bundle/yolov5/**/mlruns/
-rtx3090_training_bundle/yolov5/**/*.cache
-
-# Training data inside the bundle (should not be pushed)
-rtx3090_training_bundle/data/
+# YOLO outputs and experiment logs
+runs/
+**/wandb/
+**/mlruns/
+**/*.cache
 *.zip
 
 # Local scratch
