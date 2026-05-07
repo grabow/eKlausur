@@ -15,7 +15,7 @@ import argparse
 import re
 import tempfile
 from pathlib import Path
-from typing import Iterable, List, Tuple
+from typing import Dict, Iterable, List, Tuple
 
 import cv2
 import numpy as np
@@ -52,12 +52,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--imgsz", type=int, default=640, help="Inference image size.")
     p.add_argument("--max-det", type=int, default=100, help="Maximum detections per image.")
     p.add_argument("--device", default="", help="Inference device, e.g. '', 'cpu', 'mps', '0'.")
-    p.add_argument(
-        "--line-y-ratio",
-        type=float,
-        default=0.7,
-        help="Row grouping tolerance as ratio of median box height for reading-order sort.",
-    )
+    p.add_argument("--debug-log", default=None, help="Optional debug log file for per-page class diagnostics.")
     return p.parse_args()
 
 
@@ -92,65 +87,87 @@ def preprocess_like_eklausur(src_path: Path, dst_path: Path) -> None:
     Image.fromarray(inv).save(dst_path, quality=100, subsampling=0)
 
 
-def normalize_label(raw: str, fail_token: str) -> str:
+def normalize_letter(raw: str, fail_token: str) -> str:
     if not raw:
         return fail_token
     if raw == "?":
         return "?"
+    if raw == "x":
+        return fail_token
     if len(raw) == 1 and raw.isalpha():
         return raw.upper()
     return fail_token
 
 
-def sort_boxes_reading_order(boxes: List[Tuple[float, float, float, str]], line_y_ratio: float) -> List[Tuple[float, float, float, str]]:
-    if not boxes:
-        return boxes
-    heights = sorted([h for _, _, h, _ in boxes])
-    median_h = heights[len(heights) // 2]
-    y_tol = max(1.0, median_h * line_y_ratio)
-
-    rows: List[List[Tuple[float, float, float, str]]] = []
-    for box in sorted(boxes, key=lambda b: (b[1], b[0])):
-        x, y, h, token = box
-        placed = False
-        for row in rows:
-            row_y = sum(r[1] for r in row) / len(row)
-            if abs(y - row_y) <= y_tol:
-                row.append((x, y, h, token))
-                placed = True
-                break
-        if not placed:
-            rows.append([(x, y, h, token)])
-
-    out: List[Tuple[float, float, float, str]] = []
-    rows.sort(key=lambda row: sum(r[1] for r in row) / len(row))
-    for row in rows:
-        row.sort(key=lambda b: b[0])
-        out.extend(row)
-    return out
+def parse_digit_label(raw: str) -> int | None:
+    if len(raw) == 2 and raw[0] == "D" and raw[1].isdigit():
+        d = int(raw[1])
+        if 1 <= d <= 9:
+            return d
+    if len(raw) == 1 and raw.isdigit():
+        d = int(raw)
+        if 1 <= d <= 9:
+            return d
+    return None
 
 
-def letters_from_prediction(result, fail_token: str, line_y_ratio: float) -> List[str]:
+def letters_from_prediction(result, fail_token: str) -> Tuple[List[str], Dict[str, int]]:
     names = result.names
     boxes = result.boxes
     if boxes is None or boxes.xyxy is None or len(boxes) == 0:
-        return [fail_token]
+        return [fail_token], {}
 
-    collected: List[Tuple[float, float, float, str]] = []
+    class_histo: Dict[str, int] = {}
+    letters: List[Dict[str, float | str]] = []
+    digits_all: List[Dict[str, float | int]] = []
     xyxy = boxes.xyxy.cpu().numpy()
     cls = boxes.cls.cpu().numpy().astype(int)
+    conf = boxes.conf.cpu().numpy()
 
     for i in range(len(xyxy)):
         x1, y1, x2, y2 = xyxy[i]
-        label_raw = names.get(int(cls[i]), "") if isinstance(names, dict) else str(names[int(cls[i])])
-        token = normalize_label(label_raw, fail_token)
-        collected.append(((x1 + x2) / 2.0, (y1 + y2) / 2.0, max(1.0, y2 - y1), token))
+        label_raw = str(names.get(int(cls[i]), "")) if isinstance(names, dict) else str(names[int(cls[i])])
+        class_histo[label_raw] = class_histo.get(label_raw, 0) + 1
+        digit = parse_digit_label(label_raw)
+        if digit is not None:
+            digits_all.append(
+                {"digit": digit, "x1": float(x1), "x2": float(x2), "y1": float(y1), "y2": float(y2), "conf": float(conf[i])}
+            )
+            continue
+        token = normalize_letter(label_raw, fail_token)
+        letters.append(
+            {"letter": token, "x1": float(x1), "x2": float(x2), "y1": float(y1), "y2": float(y2), "conf": float(conf[i])}
+        )
 
-    ordered = sort_boxes_reading_order(collected, line_y_ratio=line_y_ratio)
-    letters = [token for _, _, _, token in ordered if token]
-    if not letters:
-        return [fail_token]
-    return letters
+    if not digits_all:
+        return [fail_token], class_histo
+
+    # Keep best detection per digit (D1..D9).
+    digits_best: Dict[int, Dict[str, float | int]] = {}
+    for d in digits_all:
+        k = int(d["digit"])
+        if k not in digits_best or float(d["conf"]) > float(digits_best[k]["conf"]):
+            digits_best[k] = d
+
+    out: List[str] = []
+    for digit in sorted(digits_best):
+        d = digits_best[digit]
+        width = float(d["x2"]) - float(d["x1"])
+        cx = float(d["x1"]) + width / 2.0
+        candidates: List[Dict[str, float | str]] = []
+        for letter in letters:
+            lx = float(letter["x1"]) + (float(letter["x2"]) - float(letter["x1"])) / 2.0
+            if abs(lx - cx) < width * 2:
+                candidates.append(letter)
+        if not candidates:
+            out.append(fail_token)
+            continue
+        best = max(candidates, key=lambda x: float(x["conf"]))
+        out.append(str(best["letter"]))
+
+    if not out:
+        out = [fail_token]
+    return out, class_histo
 
 
 def main() -> int:
@@ -171,6 +188,7 @@ def main() -> int:
     processed_datasets = 0
     processed_pages = 0
     failed_pages = 0
+    debug_lines: List[str] = []
 
     with tempfile.TemporaryDirectory(prefix="yolo26_preproc_") as tmp_dir_str:
         tmp_dir = Path(tmp_dir_str)
@@ -197,18 +215,29 @@ def main() -> int:
                         device=args.device if args.device else None,
                         verbose=False,
                     )
-                    letters = letters_from_prediction(preds[0], args.fail_token, args.line_y_ratio)
+                    letters, class_histo = letters_from_prediction(preds[0], args.fail_token)
                     out_lines.append(" ".join(letters))
+                    if args.debug_log:
+                        class_str = ", ".join([f"{k}:{v}" for k, v in sorted(class_histo.items())])
+                        debug_lines.append(f"{dataset_dir.name}/{page_path.name}\t{class_str}\t{' '.join(letters)}")
                 except Exception as ex:
                     failed_pages += 1
                     out_lines.append(args.fail_token)
                     print(f"[WARN] {dataset_dir.name}/{page_path.name}: {ex}")
+                    if args.debug_log:
+                        debug_lines.append(f"{dataset_dir.name}/{page_path.name}\tERROR\t{ex}")
                 processed_pages += 1
 
             out_file = dataset_dir / args.output_name
             out_file.write_text("\n".join(out_lines) + "\n", encoding="utf-8")
             processed_datasets += 1
             print(f"[OK] {dataset_dir.name}: wrote {out_file.name} ({len(out_lines)} lines)")
+
+    if args.debug_log:
+        dbg = Path(args.debug_log).expanduser().resolve()
+        dbg.parent.mkdir(parents=True, exist_ok=True)
+        dbg.write_text("\n".join(debug_lines) + ("\n" if debug_lines else ""), encoding="utf-8")
+        print(f"[INFO] Debug log written: {dbg}")
 
     print("=== Summary ===")
     print(f"Datasets processed: {processed_datasets}")
@@ -219,4 +248,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
