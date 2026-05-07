@@ -2,8 +2,8 @@
 setlocal
 
 REM Adjust these paths for your Windows machine
-set DATASET_DIR=D:\eKlausurData\YoloMultiClassGenerated
-set YOLO_ROOT=D:\py_yolo\yolov5
+set DATASET_DIR=C:\Users\hartw\PaperWork\eKlausur\rtx3090_training_bundle\rtx3090_training_bundle\data\YoloMultiClassGenerated
+set YOLO_ROOT=C:\Users\hartw\PaperWork\eKlausur\rtx3090_training_bundle\rtx3090_training_bundle\yolov5
 
 py -3.12 train_model_v5.py ^
   --dataset-dir "%DATASET_DIR%" ^
