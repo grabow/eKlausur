@@ -101,3 +101,52 @@ oder direkt aufrufen:
 ```powershell
 & "C:\Program Files\GitHub CLI\gh.exe" --version
 ```
+
+## Modell-Releases (GitHub Assets)
+
+Trainierte Modelle werden fuer die Nachnutzung (z. B. 4090-Training/Inference) als **GitHub Release Assets** im Repository `grabow/eKlausur` abgelegt.
+
+Release-Seite:
+- `https://github.com/grabow/eKlausur/releases`
+
+### Namenskonvention
+
+Release-Titel:
+- `Model <FAMILY> <SIZE> (<YYYY-MM-DD>)`
+- Beispiel: `Model YOLOv5 Medium (2026-05-06)`
+
+Asset-Dateiname:
+- `<family><size>_<YYYYMMDD>_best.pt`
+- Beispiele:
+  - `yolov5m_20260506_best.pt`
+  - `yolo26m_20260507_best.pt`
+  - `yolo26l_20260507_best.pt`
+
+Hinweis:
+- Keine experimentellen Run-IDs (`exp*`) im finalen Asset-Namen.
+- So bleibt die Zuordnung fuer Publikation und Reproduktion stabil und eindeutig.
+
+### Upload-Workflow (GitHub CLI)
+
+1. Release anlegen (oder bestehenden Tag verwenden):
+
+```bash
+gh release create <tag> \
+  --repo grabow/eKlausur \
+  --title "Model YOLOv5 Medium (2026-05-06)" \
+  --notes "Trained checkpoint for publication."
+```
+
+2. Modell lokal auf den finalen Namen bringen und als Asset hochladen:
+
+```bash
+cp /path/to/best.pt /tmp/yolov5m_20260506_best.pt
+gh release upload <tag> /tmp/yolov5m_20260506_best.pt --repo grabow/eKlausur
+```
+
+3. Falls ein Asset bereits als `best.pt` existiert, zuerst loeschen und mit finalem Namen neu hochladen:
+
+```bash
+gh release delete-asset <tag> best.pt --repo grabow/eKlausur --yes
+gh release upload <tag> /tmp/yolov5m_20260506_best.pt --repo grabow/eKlausur
+```
