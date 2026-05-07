@@ -1,0 +1,12 @@
+model: YOLOv5 Medium
+source_file: recognition_seed_det.txt
+datasets_expected: 61
+datasets_copied: 61
+pages_processed: 742
+letters_total: 3141
+letters_correct: 2856
+letters_wrong: 285
+accuracy: 0.909265
+accuracy_percent: 90.93
+extra_pred_tokens: 24
+created_at: 2026-05-07T10:39:12.829299+00:00

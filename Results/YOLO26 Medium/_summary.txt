@@ -1,0 +1,12 @@
+model: YOLO26 Medium
+source_file: recognition_yolo26.txt
+datasets_expected: 61
+datasets_copied: 61
+pages_processed: 742
+letters_total: 3141
+letters_correct: 2801
+letters_wrong: 340
+accuracy: 0.891754
+accuracy_percent: 89.18
+extra_pred_tokens: 6
+created_at: 2026-05-07T10:56:17.981407+00:00

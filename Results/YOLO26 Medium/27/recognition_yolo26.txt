@@ -1,0 +1,12 @@
+H D
+E D G C
+D ? A A
+B F H K
+B ? A A I E M Q A
+I D ?
+C F J K
+A E L
+A L L
+A E A K N Q
+E A C H H K
+F E B I
