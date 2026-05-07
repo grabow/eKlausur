@@ -12,16 +12,23 @@ Fuer Inferenzlaeufe verwenden:
 Die fachliche Referenz bleibt:
 - `/Users/wiggel/IntelliJIDEA/eKlausur`
 
-## Skript
+## Skripte
 
 - `/Users/wiggel/Python/eKlausur2/run_yolov5_recognition.py`
+- `/Users/wiggel/Python/eKlausur2/run_yolo26_recognition.py`
 
 Wichtige Parameter:
 - `--dataset-root` (z. B. `data/dataset`)
-- `--yolo-root` (Default: `/Users/wiggel/Python/py_yolo/yolov5`)
-- `--model-path` (optional; direkte Modellwahl aus lokalem Modellordner)
+- `--model-path` (direkte Modellwahl aus lokalem Modellordner)
 - `--output-name` (Dateiname pro Dataset)
-- `--cleanup-box-png` (Default: aktiv, loescht `*_box_*.png`)
+
+YOLOv5-spezifisch:
+- `run_yolov5_recognition.py` nutzt den eKlausur/py_yolo-Stack (`get_results_yolo_all`, `find_boxes`)
+- zusaetzlich: `--yolo-root`, `--cleanup-box-png`
+
+YOLO26-spezifisch:
+- `run_yolo26_recognition.py` nutzt Ultralytics direkt
+- zusaetzlich: `--conf`, `--iou`, `--imgsz`, `--max-det`, `--line-y-ratio`, `--device`
 
 ## Modellablage fuer Inferenz
 
@@ -34,6 +41,7 @@ Beispielmodelle:
 
 Hinweis:
 - Modell muss nicht nach `py_yolo` kopiert werden, wenn `--model-path` gesetzt ist.
+- Fuer YOLO26 ist ein separates Skript erforderlich; `run_yolov5_recognition.py` ist an den YOLOv5/eKlausur-Stack gebunden.
 
 ## Ergebnisablage
 
