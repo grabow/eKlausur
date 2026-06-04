@@ -1,0 +1,22 @@
+model: LLM OpenRouter Anthropic Claude Opus 4.7-plain-subset_1_10
+source_file: recognition_llm_openrouter_claude_opus47_plain.txt
+datasets_expected: 61
+datasets_copied: 10
+pages_processed: 120
+letters_total: 510
+letters_correct: 495
+letters_wrong: 15
+accuracy: 0.970588
+accuracy_percent: 97.06
+extra_pred_tokens: 0
+tp: 343
+fn: 14
+fp: 0
+tn: 153
+recall: 0.960784
+fnr: 0.039216
+precision: 1.000000
+specificity: 1.000000
+provider: openrouter
+provider_model: anthropic/claude-opus-4.7
+created_at: 2026-05-21T14:21:38.975178+00:00

@@ -35,6 +35,8 @@ runs/
 
 # Local scratch
 .tmp_eval_*/
+.tmp_x_debug/
+Temp/
 tmp_models/
 models_local/
 *.pt

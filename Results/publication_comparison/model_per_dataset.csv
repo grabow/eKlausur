@@ -1,0 +1,611 @@
+model,dataset_id,pages,letters_total,letters_correct,letters_wrong,extra_pred_tokens,accuracy,accuracy_percent
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,1,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,2,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,3,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,4,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,5,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,6,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,7,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,8,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,9,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,10,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,11,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,12,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,13,12,51,46,5,0,0.901961,90.20
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,14,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,15,12,51,45,6,0,0.882353,88.24
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,16,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,17,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,18,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,19,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,20,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,21,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,22,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,23,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,24,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,25,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,26,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,27,12,51,45,6,0,0.882353,88.24
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,28,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,29,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,30,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,31,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,32,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,33,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,34,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,35,12,51,51,0,7,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,36,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,37,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,38,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,39,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,40,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,41,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,42,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,43,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,44,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,45,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,46,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,47,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,48,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,49,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,50,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,51,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,52,13,54,53,1,0,0.981481,98.15
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,53,13,54,51,3,0,0.944444,94.44
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,54,13,54,46,8,0,0.851852,85.19
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,55,13,54,54,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,56,13,54,49,5,0,0.907407,90.74
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,57,13,54,52,2,0,0.962963,96.30
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,58,13,54,54,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,59,13,54,51,3,0,0.944444,94.44
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,60,13,54,54,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,61,13,54,54,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,1,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,2,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,3,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,4,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,5,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,6,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,7,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,8,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,9,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,10,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,11,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,12,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,13,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,14,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,15,12,51,44,7,0,0.862745,86.27
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,16,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,17,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,18,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,19,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,20,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,21,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,22,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,23,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,24,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,25,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,26,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,27,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,28,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,29,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,30,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,31,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,32,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,33,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,34,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,35,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,36,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,37,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,38,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,39,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,40,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,41,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,42,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,43,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,44,12,51,51,0,7,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,45,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,46,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,47,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,48,12,51,46,5,0,0.901961,90.20
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,49,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,50,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,51,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,52,13,54,53,1,0,0.981481,98.15
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,53,13,54,53,1,0,0.981481,98.15
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,54,13,54,48,6,0,0.888889,88.89
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,55,13,54,54,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,56,13,54,52,2,0,0.962963,96.30
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,57,13,54,53,1,0,0.981481,98.15
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,58,13,54,54,0,0,1.000000,100.00
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,59,13,54,53,1,0,0.981481,98.15
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,60,13,54,53,1,0,0.981481,98.15
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,61,13,54,54,0,0,1.000000,100.00
+LLM OpenRouter OpenAI GPT-5.2-plain,1,12,51,43,8,0,0.843137,84.31
+LLM OpenRouter OpenAI GPT-5.2-plain,2,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter OpenAI GPT-5.2-plain,3,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter OpenAI GPT-5.2-plain,4,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter OpenAI GPT-5.2-plain,5,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter OpenAI GPT-5.2-plain,6,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter OpenAI GPT-5.2-plain,7,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter OpenAI GPT-5.2-plain,8,12,51,45,6,0,0.882353,88.24
+LLM OpenRouter OpenAI GPT-5.2-plain,9,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter OpenAI GPT-5.2-plain,10,12,51,45,6,0,0.882353,88.24
+LLM OpenRouter OpenAI GPT-5.2-plain,11,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter OpenAI GPT-5.2-plain,12,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter OpenAI GPT-5.2-plain,13,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter OpenAI GPT-5.2-plain,14,12,51,43,8,0,0.843137,84.31
+LLM OpenRouter OpenAI GPT-5.2-plain,15,12,51,41,10,0,0.803922,80.39
+LLM OpenRouter OpenAI GPT-5.2-plain,16,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter OpenAI GPT-5.2-plain,17,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter OpenAI GPT-5.2-plain,18,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter OpenAI GPT-5.2-plain,19,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter OpenAI GPT-5.2-plain,20,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter OpenAI GPT-5.2-plain,21,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter OpenAI GPT-5.2-plain,22,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter OpenAI GPT-5.2-plain,23,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter OpenAI GPT-5.2-plain,24,12,51,45,6,0,0.882353,88.24
+LLM OpenRouter OpenAI GPT-5.2-plain,25,12,51,45,6,0,0.882353,88.24
+LLM OpenRouter OpenAI GPT-5.2-plain,26,12,51,38,13,0,0.745098,74.51
+LLM OpenRouter OpenAI GPT-5.2-plain,27,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter OpenAI GPT-5.2-plain,28,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter OpenAI GPT-5.2-plain,29,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter OpenAI GPT-5.2-plain,30,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter OpenAI GPT-5.2-plain,31,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter OpenAI GPT-5.2-plain,32,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter OpenAI GPT-5.2-plain,33,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter OpenAI GPT-5.2-plain,34,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter OpenAI GPT-5.2-plain,35,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter OpenAI GPT-5.2-plain,36,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter OpenAI GPT-5.2-plain,37,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter OpenAI GPT-5.2-plain,38,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter OpenAI GPT-5.2-plain,39,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter OpenAI GPT-5.2-plain,40,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter OpenAI GPT-5.2-plain,41,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter OpenAI GPT-5.2-plain,42,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter OpenAI GPT-5.2-plain,43,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter OpenAI GPT-5.2-plain,44,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter OpenAI GPT-5.2-plain,45,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter OpenAI GPT-5.2-plain,46,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter OpenAI GPT-5.2-plain,47,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter OpenAI GPT-5.2-plain,48,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter OpenAI GPT-5.2-plain,49,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter OpenAI GPT-5.2-plain,50,12,51,46,5,0,0.901961,90.20
+LLM OpenRouter OpenAI GPT-5.2-plain,51,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter OpenAI GPT-5.2-plain,52,13,54,44,10,0,0.814815,81.48
+LLM OpenRouter OpenAI GPT-5.2-plain,53,13,54,48,6,0,0.888889,88.89
+LLM OpenRouter OpenAI GPT-5.2-plain,54,13,54,48,6,0,0.888889,88.89
+LLM OpenRouter OpenAI GPT-5.2-plain,55,13,54,52,2,0,0.962963,96.30
+LLM OpenRouter OpenAI GPT-5.2-plain,56,13,54,49,5,0,0.907407,90.74
+LLM OpenRouter OpenAI GPT-5.2-plain,57,13,54,52,2,0,0.962963,96.30
+LLM OpenRouter OpenAI GPT-5.2-plain,58,13,54,53,1,0,0.981481,98.15
+LLM OpenRouter OpenAI GPT-5.2-plain,59,13,54,49,5,0,0.907407,90.74
+LLM OpenRouter OpenAI GPT-5.2-plain,60,13,54,52,2,0,0.962963,96.30
+LLM OpenRouter OpenAI GPT-5.2-plain,61,13,54,48,6,0,0.888889,88.89
+LLM OpenRouter OpenAI GPT-5.2-weak,1,12,51,44,7,0,0.862745,86.27
+LLM OpenRouter OpenAI GPT-5.2-weak,2,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter OpenAI GPT-5.2-weak,3,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter OpenAI GPT-5.2-weak,4,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter OpenAI GPT-5.2-weak,5,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter OpenAI GPT-5.2-weak,6,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter OpenAI GPT-5.2-weak,7,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter OpenAI GPT-5.2-weak,8,12,51,46,5,0,0.901961,90.20
+LLM OpenRouter OpenAI GPT-5.2-weak,9,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter OpenAI GPT-5.2-weak,10,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter OpenAI GPT-5.2-weak,11,12,51,44,7,0,0.862745,86.27
+LLM OpenRouter OpenAI GPT-5.2-weak,12,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter OpenAI GPT-5.2-weak,13,12,51,43,8,0,0.843137,84.31
+LLM OpenRouter OpenAI GPT-5.2-weak,14,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter OpenAI GPT-5.2-weak,15,12,51,44,7,0,0.862745,86.27
+LLM OpenRouter OpenAI GPT-5.2-weak,16,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter OpenAI GPT-5.2-weak,17,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter OpenAI GPT-5.2-weak,18,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter OpenAI GPT-5.2-weak,19,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter OpenAI GPT-5.2-weak,20,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter OpenAI GPT-5.2-weak,21,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter OpenAI GPT-5.2-weak,22,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter OpenAI GPT-5.2-weak,23,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter OpenAI GPT-5.2-weak,24,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter OpenAI GPT-5.2-weak,25,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter OpenAI GPT-5.2-weak,26,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter OpenAI GPT-5.2-weak,27,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter OpenAI GPT-5.2-weak,28,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter OpenAI GPT-5.2-weak,29,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter OpenAI GPT-5.2-weak,30,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter OpenAI GPT-5.2-weak,31,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter OpenAI GPT-5.2-weak,32,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter OpenAI GPT-5.2-weak,33,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter OpenAI GPT-5.2-weak,34,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter OpenAI GPT-5.2-weak,35,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter OpenAI GPT-5.2-weak,36,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter OpenAI GPT-5.2-weak,37,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter OpenAI GPT-5.2-weak,38,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter OpenAI GPT-5.2-weak,39,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter OpenAI GPT-5.2-weak,40,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter OpenAI GPT-5.2-weak,41,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter OpenAI GPT-5.2-weak,42,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter OpenAI GPT-5.2-weak,43,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter OpenAI GPT-5.2-weak,44,12,51,46,5,0,0.901961,90.20
+LLM OpenRouter OpenAI GPT-5.2-weak,45,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter OpenAI GPT-5.2-weak,46,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter OpenAI GPT-5.2-weak,47,12,51,46,5,0,0.901961,90.20
+LLM OpenRouter OpenAI GPT-5.2-weak,48,12,51,47,4,3,0.921569,92.16
+LLM OpenRouter OpenAI GPT-5.2-weak,49,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter OpenAI GPT-5.2-weak,50,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter OpenAI GPT-5.2-weak,51,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter OpenAI GPT-5.2-weak,52,13,54,47,7,0,0.870370,87.04
+LLM OpenRouter OpenAI GPT-5.2-weak,53,13,54,52,2,0,0.962963,96.30
+LLM OpenRouter OpenAI GPT-5.2-weak,54,13,54,48,6,3,0.888889,88.89
+LLM OpenRouter OpenAI GPT-5.2-weak,55,13,54,51,3,0,0.944444,94.44
+LLM OpenRouter OpenAI GPT-5.2-weak,56,13,54,51,3,0,0.944444,94.44
+LLM OpenRouter OpenAI GPT-5.2-weak,57,13,54,54,0,0,1.000000,100.00
+LLM OpenRouter OpenAI GPT-5.2-weak,58,13,54,54,0,0,1.000000,100.00
+LLM OpenRouter OpenAI GPT-5.2-weak,59,13,54,52,2,0,0.962963,96.30
+LLM OpenRouter OpenAI GPT-5.2-weak,60,13,54,54,0,0,1.000000,100.00
+LLM OpenRouter OpenAI GPT-5.2-weak,61,13,54,51,3,0,0.944444,94.44
+LLM OpenRouter Qwen3-VL-30B-plain,1,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter Qwen3-VL-30B-plain,2,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter Qwen3-VL-30B-plain,3,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Qwen3-VL-30B-plain,4,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Qwen3-VL-30B-plain,5,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-plain,6,12,51,24,27,0,0.470588,47.06
+LLM OpenRouter Qwen3-VL-30B-plain,7,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter Qwen3-VL-30B-plain,8,12,51,46,5,0,0.901961,90.20
+LLM OpenRouter Qwen3-VL-30B-plain,9,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-plain,10,12,51,45,6,0,0.882353,88.24
+LLM OpenRouter Qwen3-VL-30B-plain,11,12,51,46,5,0,0.901961,90.20
+LLM OpenRouter Qwen3-VL-30B-plain,12,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-plain,13,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter Qwen3-VL-30B-plain,14,12,51,43,8,0,0.843137,84.31
+LLM OpenRouter Qwen3-VL-30B-plain,15,12,51,41,10,0,0.803922,80.39
+LLM OpenRouter Qwen3-VL-30B-plain,16,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter Qwen3-VL-30B-plain,17,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter Qwen3-VL-30B-plain,18,12,51,45,6,0,0.882353,88.24
+LLM OpenRouter Qwen3-VL-30B-plain,19,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Qwen3-VL-30B-plain,20,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Qwen3-VL-30B-plain,21,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter Qwen3-VL-30B-plain,22,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-plain,23,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-plain,24,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter Qwen3-VL-30B-plain,25,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter Qwen3-VL-30B-plain,26,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter Qwen3-VL-30B-plain,27,12,51,43,8,0,0.843137,84.31
+LLM OpenRouter Qwen3-VL-30B-plain,28,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Qwen3-VL-30B-plain,29,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Qwen3-VL-30B-plain,30,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Qwen3-VL-30B-plain,31,12,51,46,5,0,0.901961,90.20
+LLM OpenRouter Qwen3-VL-30B-plain,32,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Qwen3-VL-30B-plain,33,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter Qwen3-VL-30B-plain,34,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter Qwen3-VL-30B-plain,35,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-plain,36,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-plain,37,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-plain,38,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-plain,39,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Qwen3-VL-30B-plain,40,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Qwen3-VL-30B-plain,41,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-plain,42,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-plain,43,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Qwen3-VL-30B-plain,44,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter Qwen3-VL-30B-plain,45,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter Qwen3-VL-30B-plain,46,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Qwen3-VL-30B-plain,47,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Qwen3-VL-30B-plain,48,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Qwen3-VL-30B-plain,49,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter Qwen3-VL-30B-plain,50,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-plain,51,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Qwen3-VL-30B-plain,52,13,54,41,13,0,0.759259,75.93
+LLM OpenRouter Qwen3-VL-30B-plain,53,13,54,48,6,0,0.888889,88.89
+LLM OpenRouter Qwen3-VL-30B-plain,54,13,54,47,7,0,0.870370,87.04
+LLM OpenRouter Qwen3-VL-30B-plain,55,13,54,52,2,0,0.962963,96.30
+LLM OpenRouter Qwen3-VL-30B-plain,56,13,54,50,4,0,0.925926,92.59
+LLM OpenRouter Qwen3-VL-30B-plain,57,13,54,51,3,0,0.944444,94.44
+LLM OpenRouter Qwen3-VL-30B-plain,58,13,54,50,4,0,0.925926,92.59
+LLM OpenRouter Qwen3-VL-30B-plain,59,13,54,47,7,0,0.870370,87.04
+LLM OpenRouter Qwen3-VL-30B-plain,60,13,54,53,1,0,0.981481,98.15
+LLM OpenRouter Qwen3-VL-30B-plain,61,13,54,43,11,0,0.796296,79.63
+LLM OpenRouter Qwen3-VL-30B-weak,1,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter Qwen3-VL-30B-weak,2,12,51,44,7,0,0.862745,86.27
+LLM OpenRouter Qwen3-VL-30B-weak,3,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Qwen3-VL-30B-weak,4,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-weak,5,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-weak,6,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-weak,7,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter Qwen3-VL-30B-weak,8,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Qwen3-VL-30B-weak,9,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-weak,10,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Qwen3-VL-30B-weak,11,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Qwen3-VL-30B-weak,12,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-weak,13,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Qwen3-VL-30B-weak,14,12,51,45,6,0,0.882353,88.24
+LLM OpenRouter Qwen3-VL-30B-weak,15,12,51,44,7,0,0.862745,86.27
+LLM OpenRouter Qwen3-VL-30B-weak,16,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Qwen3-VL-30B-weak,17,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Qwen3-VL-30B-weak,18,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter Qwen3-VL-30B-weak,19,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Qwen3-VL-30B-weak,20,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Qwen3-VL-30B-weak,21,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Qwen3-VL-30B-weak,22,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-weak,23,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-weak,24,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Qwen3-VL-30B-weak,25,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter Qwen3-VL-30B-weak,26,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Qwen3-VL-30B-weak,27,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Qwen3-VL-30B-weak,28,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Qwen3-VL-30B-weak,29,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Qwen3-VL-30B-weak,30,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-weak,31,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Qwen3-VL-30B-weak,32,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Qwen3-VL-30B-weak,33,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter Qwen3-VL-30B-weak,34,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Qwen3-VL-30B-weak,35,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Qwen3-VL-30B-weak,36,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-weak,37,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-weak,38,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-weak,39,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-weak,40,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-weak,41,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-weak,42,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-weak,43,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-weak,44,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter Qwen3-VL-30B-weak,45,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-weak,46,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-weak,47,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Qwen3-VL-30B-weak,48,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Qwen3-VL-30B-weak,49,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter Qwen3-VL-30B-weak,50,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter Qwen3-VL-30B-weak,51,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-weak,52,13,54,44,10,0,0.814815,81.48
+LLM OpenRouter Qwen3-VL-30B-weak,53,13,54,52,2,0,0.962963,96.30
+LLM OpenRouter Qwen3-VL-30B-weak,54,13,54,48,6,0,0.888889,88.89
+LLM OpenRouter Qwen3-VL-30B-weak,55,13,54,53,1,0,0.981481,98.15
+LLM OpenRouter Qwen3-VL-30B-weak,56,13,54,53,1,0,0.981481,98.15
+LLM OpenRouter Qwen3-VL-30B-weak,57,13,54,51,3,0,0.944444,94.44
+LLM OpenRouter Qwen3-VL-30B-weak,58,13,54,54,0,0,1.000000,100.00
+LLM OpenRouter Qwen3-VL-30B-weak,59,13,54,49,5,0,0.907407,90.74
+LLM OpenRouter Qwen3-VL-30B-weak,60,13,54,53,1,0,0.981481,98.15
+LLM OpenRouter Qwen3-VL-30B-weak,61,13,54,52,2,0,0.962963,96.30
+LLM OpenRouter xAI Grok-4.3-plain,1,12,51,44,7,0,0.862745,86.27
+LLM OpenRouter xAI Grok-4.3-plain,2,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter xAI Grok-4.3-plain,3,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter xAI Grok-4.3-plain,4,12,51,43,8,6,0.843137,84.31
+LLM OpenRouter xAI Grok-4.3-plain,5,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter xAI Grok-4.3-plain,6,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter xAI Grok-4.3-plain,7,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter xAI Grok-4.3-plain,8,12,51,45,6,0,0.882353,88.24
+LLM OpenRouter xAI Grok-4.3-plain,9,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter xAI Grok-4.3-plain,10,12,51,39,12,0,0.764706,76.47
+LLM OpenRouter xAI Grok-4.3-plain,11,12,51,43,8,0,0.843137,84.31
+LLM OpenRouter xAI Grok-4.3-plain,12,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter xAI Grok-4.3-plain,13,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter xAI Grok-4.3-plain,14,12,51,41,10,0,0.803922,80.39
+LLM OpenRouter xAI Grok-4.3-plain,15,12,51,39,12,1,0.764706,76.47
+LLM OpenRouter xAI Grok-4.3-plain,16,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter xAI Grok-4.3-plain,17,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter xAI Grok-4.3-plain,18,12,51,43,8,0,0.843137,84.31
+LLM OpenRouter xAI Grok-4.3-plain,19,12,51,43,8,0,0.843137,84.31
+LLM OpenRouter xAI Grok-4.3-plain,20,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter xAI Grok-4.3-plain,21,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter xAI Grok-4.3-plain,22,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter xAI Grok-4.3-plain,23,12,51,44,7,0,0.862745,86.27
+LLM OpenRouter xAI Grok-4.3-plain,24,12,51,43,8,0,0.843137,84.31
+LLM OpenRouter xAI Grok-4.3-plain,25,12,51,43,8,0,0.843137,84.31
+LLM OpenRouter xAI Grok-4.3-plain,26,12,51,45,6,0,0.882353,88.24
+LLM OpenRouter xAI Grok-4.3-plain,27,12,51,39,12,0,0.764706,76.47
+LLM OpenRouter xAI Grok-4.3-plain,28,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter xAI Grok-4.3-plain,29,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter xAI Grok-4.3-plain,30,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter xAI Grok-4.3-plain,31,12,51,45,6,0,0.882353,88.24
+LLM OpenRouter xAI Grok-4.3-plain,32,12,51,46,5,0,0.901961,90.20
+LLM OpenRouter xAI Grok-4.3-plain,33,12,51,42,9,0,0.823529,82.35
+LLM OpenRouter xAI Grok-4.3-plain,34,12,51,41,10,0,0.803922,80.39
+LLM OpenRouter xAI Grok-4.3-plain,35,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter xAI Grok-4.3-plain,36,12,51,46,5,0,0.901961,90.20
+LLM OpenRouter xAI Grok-4.3-plain,37,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter xAI Grok-4.3-plain,38,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter xAI Grok-4.3-plain,39,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter xAI Grok-4.3-plain,40,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter xAI Grok-4.3-plain,41,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter xAI Grok-4.3-plain,42,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter xAI Grok-4.3-plain,43,12,51,46,5,0,0.901961,90.20
+LLM OpenRouter xAI Grok-4.3-plain,44,12,51,42,9,0,0.823529,82.35
+LLM OpenRouter xAI Grok-4.3-plain,45,12,51,45,6,0,0.882353,88.24
+LLM OpenRouter xAI Grok-4.3-plain,46,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter xAI Grok-4.3-plain,47,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter xAI Grok-4.3-plain,48,12,51,43,8,0,0.843137,84.31
+LLM OpenRouter xAI Grok-4.3-plain,49,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter xAI Grok-4.3-plain,50,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter xAI Grok-4.3-plain,51,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter xAI Grok-4.3-plain,52,13,54,45,9,0,0.833333,83.33
+LLM OpenRouter xAI Grok-4.3-plain,53,13,54,45,9,0,0.833333,83.33
+LLM OpenRouter xAI Grok-4.3-plain,54,13,54,36,18,0,0.666667,66.67
+LLM OpenRouter xAI Grok-4.3-plain,55,13,54,48,6,0,0.888889,88.89
+LLM OpenRouter xAI Grok-4.3-plain,56,13,54,44,10,0,0.814815,81.48
+LLM OpenRouter xAI Grok-4.3-plain,57,13,54,47,7,0,0.870370,87.04
+LLM OpenRouter xAI Grok-4.3-plain,58,13,54,53,1,0,0.981481,98.15
+LLM OpenRouter xAI Grok-4.3-plain,59,13,54,45,9,0,0.833333,83.33
+LLM OpenRouter xAI Grok-4.3-plain,60,13,54,51,3,0,0.944444,94.44
+LLM OpenRouter xAI Grok-4.3-plain,61,13,54,49,5,0,0.907407,90.74
+LLM OpenRouter xAI Grok-4.3-weak,1,12,51,43,8,0,0.843137,84.31
+LLM OpenRouter xAI Grok-4.3-weak,2,12,51,43,8,0,0.843137,84.31
+LLM OpenRouter xAI Grok-4.3-weak,3,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter xAI Grok-4.3-weak,4,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter xAI Grok-4.3-weak,5,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter xAI Grok-4.3-weak,6,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter xAI Grok-4.3-weak,7,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter xAI Grok-4.3-weak,8,12,51,40,11,0,0.784314,78.43
+LLM OpenRouter xAI Grok-4.3-weak,9,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter xAI Grok-4.3-weak,10,12,51,43,8,0,0.843137,84.31
+LLM OpenRouter xAI Grok-4.3-weak,11,12,51,46,5,0,0.901961,90.20
+LLM OpenRouter xAI Grok-4.3-weak,12,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter xAI Grok-4.3-weak,13,12,51,44,7,0,0.862745,86.27
+LLM OpenRouter xAI Grok-4.3-weak,14,12,51,42,9,0,0.823529,82.35
+LLM OpenRouter xAI Grok-4.3-weak,15,12,51,41,10,0,0.803922,80.39
+LLM OpenRouter xAI Grok-4.3-weak,16,12,51,46,5,0,0.901961,90.20
+LLM OpenRouter xAI Grok-4.3-weak,17,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter xAI Grok-4.3-weak,18,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter xAI Grok-4.3-weak,19,12,51,41,10,5,0.803922,80.39
+LLM OpenRouter xAI Grok-4.3-weak,20,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter xAI Grok-4.3-weak,21,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter xAI Grok-4.3-weak,22,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter xAI Grok-4.3-weak,23,12,51,44,7,0,0.862745,86.27
+LLM OpenRouter xAI Grok-4.3-weak,24,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter xAI Grok-4.3-weak,25,12,51,46,5,0,0.901961,90.20
+LLM OpenRouter xAI Grok-4.3-weak,26,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter xAI Grok-4.3-weak,27,12,51,41,10,0,0.803922,80.39
+LLM OpenRouter xAI Grok-4.3-weak,28,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter xAI Grok-4.3-weak,29,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter xAI Grok-4.3-weak,30,12,51,46,5,0,0.901961,90.20
+LLM OpenRouter xAI Grok-4.3-weak,31,12,51,43,8,0,0.843137,84.31
+LLM OpenRouter xAI Grok-4.3-weak,32,12,51,44,7,0,0.862745,86.27
+LLM OpenRouter xAI Grok-4.3-weak,33,12,51,44,7,0,0.862745,86.27
+LLM OpenRouter xAI Grok-4.3-weak,34,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter xAI Grok-4.3-weak,35,12,51,45,6,0,0.882353,88.24
+LLM OpenRouter xAI Grok-4.3-weak,36,12,51,48,3,0,0.941176,94.12
+LLM OpenRouter xAI Grok-4.3-weak,37,12,51,49,2,0,0.960784,96.08
+LLM OpenRouter xAI Grok-4.3-weak,38,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter xAI Grok-4.3-weak,39,12,51,50,1,0,0.980392,98.04
+LLM OpenRouter xAI Grok-4.3-weak,40,12,51,45,6,0,0.882353,88.24
+LLM OpenRouter xAI Grok-4.3-weak,41,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter xAI Grok-4.3-weak,42,12,51,51,0,0,1.000000,100.00
+LLM OpenRouter xAI Grok-4.3-weak,43,12,51,42,9,0,0.823529,82.35
+LLM OpenRouter xAI Grok-4.3-weak,44,12,51,40,11,0,0.784314,78.43
+LLM OpenRouter xAI Grok-4.3-weak,45,12,51,46,5,0,0.901961,90.20
+LLM OpenRouter xAI Grok-4.3-weak,46,12,51,46,5,0,0.901961,90.20
+LLM OpenRouter xAI Grok-4.3-weak,47,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter xAI Grok-4.3-weak,48,12,51,38,13,0,0.745098,74.51
+LLM OpenRouter xAI Grok-4.3-weak,49,12,51,46,5,0,0.901961,90.20
+LLM OpenRouter xAI Grok-4.3-weak,50,12,51,47,4,0,0.921569,92.16
+LLM OpenRouter xAI Grok-4.3-weak,51,12,51,42,9,0,0.823529,82.35
+LLM OpenRouter xAI Grok-4.3-weak,52,13,54,43,11,0,0.796296,79.63
+LLM OpenRouter xAI Grok-4.3-weak,53,13,54,51,3,0,0.944444,94.44
+LLM OpenRouter xAI Grok-4.3-weak,54,13,54,33,21,0,0.611111,61.11
+LLM OpenRouter xAI Grok-4.3-weak,55,13,54,51,3,0,0.944444,94.44
+LLM OpenRouter xAI Grok-4.3-weak,56,13,54,47,7,7,0.870370,87.04
+LLM OpenRouter xAI Grok-4.3-weak,57,13,54,50,4,0,0.925926,92.59
+LLM OpenRouter xAI Grok-4.3-weak,58,13,54,54,0,0,1.000000,100.00
+LLM OpenRouter xAI Grok-4.3-weak,59,13,54,51,3,0,0.944444,94.44
+LLM OpenRouter xAI Grok-4.3-weak,60,13,54,52,2,0,0.962963,96.30
+LLM OpenRouter xAI Grok-4.3-weak,61,13,54,53,1,0,0.981481,98.15
+YOLO26 Medium-plain,1,12,51,49,2,0,0.960784,96.08
+YOLO26 Medium-plain,2,12,51,46,5,0,0.901961,90.20
+YOLO26 Medium-plain,3,12,51,45,6,1,0.882353,88.24
+YOLO26 Medium-plain,4,12,51,49,2,0,0.960784,96.08
+YOLO26 Medium-plain,5,12,51,47,4,1,0.921569,92.16
+YOLO26 Medium-plain,6,12,51,49,2,1,0.960784,96.08
+YOLO26 Medium-plain,7,12,51,51,0,0,1.000000,100.00
+YOLO26 Medium-plain,8,12,51,45,6,0,0.882353,88.24
+YOLO26 Medium-plain,9,12,51,44,7,0,0.862745,86.27
+YOLO26 Medium-plain,10,12,51,40,11,0,0.784314,78.43
+YOLO26 Medium-plain,11,12,51,47,4,1,0.921569,92.16
+YOLO26 Medium-plain,12,12,51,47,4,0,0.921569,92.16
+YOLO26 Medium-plain,13,12,51,39,12,0,0.764706,76.47
+YOLO26 Medium-plain,14,12,51,48,3,0,0.941176,94.12
+YOLO26 Medium-plain,15,12,51,40,11,0,0.784314,78.43
+YOLO26 Medium-plain,16,12,51,51,0,0,1.000000,100.00
+YOLO26 Medium-plain,17,12,51,51,0,0,1.000000,100.00
+YOLO26 Medium-plain,18,12,51,44,7,0,0.862745,86.27
+YOLO26 Medium-plain,19,12,51,41,10,0,0.803922,80.39
+YOLO26 Medium-plain,20,12,51,48,3,0,0.941176,94.12
+YOLO26 Medium-plain,21,12,51,44,7,0,0.862745,86.27
+YOLO26 Medium-plain,22,12,51,46,5,0,0.901961,90.20
+YOLO26 Medium-plain,23,12,51,49,2,0,0.960784,96.08
+YOLO26 Medium-plain,24,12,51,44,7,0,0.862745,86.27
+YOLO26 Medium-plain,25,12,51,48,3,0,0.941176,94.12
+YOLO26 Medium-plain,26,12,51,42,9,0,0.823529,82.35
+YOLO26 Medium-plain,27,12,51,46,5,1,0.901961,90.20
+YOLO26 Medium-plain,28,12,51,43,8,0,0.843137,84.31
+YOLO26 Medium-plain,29,12,51,40,11,0,0.784314,78.43
+YOLO26 Medium-plain,30,12,51,48,3,0,0.941176,94.12
+YOLO26 Medium-plain,31,12,51,42,9,0,0.823529,82.35
+YOLO26 Medium-plain,32,12,51,43,8,0,0.843137,84.31
+YOLO26 Medium-plain,33,12,51,42,9,0,0.823529,82.35
+YOLO26 Medium-plain,34,12,51,42,9,0,0.823529,82.35
+YOLO26 Medium-plain,35,12,51,50,1,0,0.980392,98.04
+YOLO26 Medium-plain,36,12,51,51,0,0,1.000000,100.00
+YOLO26 Medium-plain,37,12,51,51,0,0,1.000000,100.00
+YOLO26 Medium-plain,38,12,51,46,5,0,0.901961,90.20
+YOLO26 Medium-plain,39,12,51,48,3,0,0.941176,94.12
+YOLO26 Medium-plain,40,12,51,49,2,0,0.960784,96.08
+YOLO26 Medium-plain,41,12,51,43,8,1,0.843137,84.31
+YOLO26 Medium-plain,42,12,51,51,0,0,1.000000,100.00
+YOLO26 Medium-plain,43,12,51,47,4,0,0.921569,92.16
+YOLO26 Medium-plain,44,12,51,38,13,0,0.745098,74.51
+YOLO26 Medium-plain,45,12,51,47,4,0,0.921569,92.16
+YOLO26 Medium-plain,46,12,51,49,2,0,0.960784,96.08
+YOLO26 Medium-plain,47,12,51,49,2,0,0.960784,96.08
+YOLO26 Medium-plain,48,12,51,43,8,0,0.843137,84.31
+YOLO26 Medium-plain,49,12,51,50,1,0,0.980392,98.04
+YOLO26 Medium-plain,50,12,51,50,1,0,0.980392,98.04
+YOLO26 Medium-plain,51,12,51,46,5,0,0.901961,90.20
+YOLO26 Medium-plain,52,13,54,35,19,0,0.648148,64.81
+YOLO26 Medium-plain,53,13,54,50,4,0,0.925926,92.59
+YOLO26 Medium-plain,54,13,54,32,22,0,0.592593,59.26
+YOLO26 Medium-plain,55,13,54,46,8,0,0.851852,85.19
+YOLO26 Medium-plain,56,13,54,48,6,0,0.888889,88.89
+YOLO26 Medium-plain,57,13,54,52,2,0,0.962963,96.30
+YOLO26 Medium-plain,58,13,54,49,5,0,0.907407,90.74
+YOLO26 Medium-plain,59,13,54,43,11,0,0.796296,79.63
+YOLO26 Medium-plain,60,13,54,52,2,0,0.962963,96.30
+YOLO26 Medium-plain,61,13,54,46,8,0,0.851852,85.19
+YOLOv5 Medium-plain,1,12,51,46,5,0,0.901961,90.20
+YOLOv5 Medium-plain,2,12,51,35,16,1,0.686275,68.63
+YOLOv5 Medium-plain,3,12,51,44,7,0,0.862745,86.27
+YOLOv5 Medium-plain,4,12,51,51,0,0,1.000000,100.00
+YOLOv5 Medium-plain,5,12,51,51,0,0,1.000000,100.00
+YOLOv5 Medium-plain,6,12,51,50,1,0,0.980392,98.04
+YOLOv5 Medium-plain,7,12,51,50,1,0,0.980392,98.04
+YOLOv5 Medium-plain,8,12,51,46,5,0,0.901961,90.20
+YOLOv5 Medium-plain,9,12,51,47,4,0,0.921569,92.16
+YOLOv5 Medium-plain,10,12,51,45,6,0,0.882353,88.24
+YOLOv5 Medium-plain,11,12,51,48,3,0,0.941176,94.12
+YOLOv5 Medium-plain,12,12,51,44,7,0,0.862745,86.27
+YOLOv5 Medium-plain,13,12,51,45,6,0,0.882353,88.24
+YOLOv5 Medium-plain,14,12,51,48,3,0,0.941176,94.12
+YOLOv5 Medium-plain,15,12,51,42,9,0,0.823529,82.35
+YOLOv5 Medium-plain,16,12,51,49,2,0,0.960784,96.08
+YOLOv5 Medium-plain,17,12,51,51,0,0,1.000000,100.00
+YOLOv5 Medium-plain,18,12,51,49,2,0,0.960784,96.08
+YOLOv5 Medium-plain,19,12,51,47,4,0,0.921569,92.16
+YOLOv5 Medium-plain,20,12,51,49,2,0,0.960784,96.08
+YOLOv5 Medium-plain,21,12,51,48,3,0,0.941176,94.12
+YOLOv5 Medium-plain,22,12,51,46,5,0,0.901961,90.20
+YOLOv5 Medium-plain,23,12,51,48,3,0,0.941176,94.12
+YOLOv5 Medium-plain,24,12,51,49,2,0,0.960784,96.08
+YOLOv5 Medium-plain,25,12,51,49,2,0,0.960784,96.08
+YOLOv5 Medium-plain,26,12,51,50,1,0,0.980392,98.04
+YOLOv5 Medium-plain,27,12,51,46,5,0,0.901961,90.20
+YOLOv5 Medium-plain,28,12,51,47,4,0,0.921569,92.16
+YOLOv5 Medium-plain,29,12,51,42,9,3,0.823529,82.35
+YOLOv5 Medium-plain,30,12,51,50,1,0,0.980392,98.04
+YOLOv5 Medium-plain,31,12,51,44,7,0,0.862745,86.27
+YOLOv5 Medium-plain,32,12,51,45,6,1,0.882353,88.24
+YOLOv5 Medium-plain,33,12,51,43,8,1,0.843137,84.31
+YOLOv5 Medium-plain,34,12,51,36,15,3,0.705882,70.59
+YOLOv5 Medium-plain,35,12,51,49,2,1,0.960784,96.08
+YOLOv5 Medium-plain,36,12,51,50,1,0,0.980392,98.04
+YOLOv5 Medium-plain,37,12,51,49,2,0,0.960784,96.08
+YOLOv5 Medium-plain,38,12,51,45,6,0,0.882353,88.24
+YOLOv5 Medium-plain,39,12,51,48,3,0,0.941176,94.12
+YOLOv5 Medium-plain,40,12,51,50,1,2,0.980392,98.04
+YOLOv5 Medium-plain,41,12,51,43,8,3,0.843137,84.31
+YOLOv5 Medium-plain,42,12,51,50,1,0,0.980392,98.04
+YOLOv5 Medium-plain,43,12,51,38,13,0,0.745098,74.51
+YOLOv5 Medium-plain,44,12,51,39,12,0,0.764706,76.47
+YOLOv5 Medium-plain,45,12,51,46,5,1,0.901961,90.20
+YOLOv5 Medium-plain,46,12,51,40,11,3,0.784314,78.43
+YOLOv5 Medium-plain,47,12,51,50,1,3,0.980392,98.04
+YOLOv5 Medium-plain,48,12,51,42,9,0,0.823529,82.35
+YOLOv5 Medium-plain,49,12,51,49,2,1,0.960784,96.08
+YOLOv5 Medium-plain,50,12,51,51,0,1,1.000000,100.00
+YOLOv5 Medium-plain,51,12,51,49,2,0,0.960784,96.08
+YOLOv5 Medium-plain,52,13,54,46,8,0,0.851852,85.19
+YOLOv5 Medium-plain,53,13,54,51,3,0,0.944444,94.44
+YOLOv5 Medium-plain,54,13,54,36,18,0,0.666667,66.67
+YOLOv5 Medium-plain,55,13,54,49,5,0,0.907407,90.74
+YOLOv5 Medium-plain,56,13,54,47,7,0,0.870370,87.04
+YOLOv5 Medium-plain,57,13,54,52,2,0,0.962963,96.30
+YOLOv5 Medium-plain,58,13,54,53,1,0,0.981481,98.15
+YOLOv5 Medium-plain,59,13,54,50,4,0,0.925926,92.59
+YOLOv5 Medium-plain,60,13,54,54,0,0,1.000000,100.00
+YOLOv5 Medium-plain,61,13,54,50,4,0,0.925926,92.59

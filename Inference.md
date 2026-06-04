@@ -43,6 +43,9 @@ LLM-spezifisch:
 - Konkretes Modell waehlen: `--provider-model <modellname>`
 - Dataset-Auswahl: `--dataset-id 1` (mehrfach moeglich)
 - zusaetzlich: `--prompt-index`, `--expected-mode`, `--raw-json-dir`, `--log-file`
+  - `--expected-mode none`: kein Hint
+  - `--expected-mode studsolution_line`: Hint aus `studSolution.txt` (Student-Antworten)
+  - `--expected-mode reference_line`: Hint aus `result.txt` Referenz-Loesung (line-aligned, empfohlen fuer "korrekte Loesung als Hint")
 
 Beispiele:
 ```bash
@@ -91,9 +94,11 @@ Vergleich gegen `studSolution.txt`:
 - Bewertet werden pro Zeile nur die ersten `x` Vorhersagetokens, mit `x = Anzahl Soll-Tokens`.
 - Zusatztokens werden separat als `extra_pred_tokens` gezaehlt.
 - `letters_wrong = letters_total - letters_correct`.
+- Wichtig: Bei Klassifikationsmetriken mit `result.txt` (TP/FN/FP/TN) darf wegen `extra_pred_tokens` nicht rein flat ueber alle Tokens gematcht werden. Stattdessen line-aligned je Seite/Zeile auswerten.
 
 ## Pflichtfelder in `_summary.txt`
 
+Minimal (immer):
 - `model`
 - `source_file`
 - `datasets_expected`
@@ -107,6 +112,53 @@ Vergleich gegen `studSolution.txt`:
 - `extra_pred_tokens`
 - `created_at`
 
+Erweitert (fuer Publikation/LLM-Vergleich, ab sofort Standard):
+- `run_id`
+- `provider`
+- `provider_model`
+- `prompt_index`
+- `expected_mode`
+- `preprocessing`
+- `hardware`
+- `started_at`
+- `finished_at`
+- `duration_seconds`
+- `throughput_pages_per_second`
+- `substitutions`
+- `deletions`
+- `insertions`
+- `ci95_wilson_low`
+- `ci95_wilson_high`
+- `avg_request_latency_seconds`
+- `prompt_tokens_total`
+- `completion_tokens_total`
+- `total_tokens_total`
+- `estimated_cost_usd`
+
+## Erfassungsregeln fuer den naechsten Lauf
+
+- Fuer LLM-Laeufe immer mit `--log-file` starten, damit Request-Latenz und Usage-Tokens erfassbar sind.
+- `started_at` vor dem ersten Dataset setzen, `finished_at` nach dem letzten Dataset.
+- `duration_seconds = finished_at - started_at`.
+- `throughput_pages_per_second = pages_processed / duration_seconds`.
+- Fehlerarten:
+  - `substitutions`: Soll-Token vorhanden, Vorhersage-Token vorhanden, aber ungleich.
+  - `deletions`: Soll-Token vorhanden, Vorhersage-Token fehlt.
+  - `insertions`: Vorhersage-Token ohne Soll-Gegenstueck.
+- Kosten:
+  - Falls Usage-Tokens vorhanden: aus `prompt_tokens_total` und `completion_tokens_total` mit Modellpreis berechnen.
+  - Falls nicht vorhanden: Tokenfelder und `estimated_cost_usd` auf `null`/leer setzen und im Begleitdokument markieren.
+
+## LLM-Run (empfohlenes Kommando fuer vollstaendige Erfassung)
+
+```bash
+/Users/wiggel/Python/eKlausur2/.venv/bin/python /Users/wiggel/Python/eKlausur2/run_llm_recognition.py \
+  --dataset-root /Users/wiggel/Python/eKlausur2/data/dataset \
+  --provider openrouter \
+  --provider-model google/gemini-3.1-flash-lite \
+  --log-file /Users/wiggel/Python/eKlausur2/Results/llm_openrouter_gemini31_run.log
+```
+
 ## Standard-Kennzahlen
 
 - `letters_total`: Gesamtzahl Soll-Tokens
@@ -116,3 +168,25 @@ Vergleich gegen `studSolution.txt`:
 - `accuracy_percent`: `accuracy * 100`
 - `pages_processed`: Anzahl bewerteter Seiten
 - `extra_pred_tokens`: vorhergesagte Tokens ohne GT-Pendant
+
+## Klassifikationsmetriken (Pass/Fail-Sicht)
+
+Definition:
+- Positiv = "Antwort ist inhaltlich korrekt" (laut `result.txt`).
+- Negativ = "Antwort ist inhaltlich falsch".
+
+Metriken:
+- `TP`: richtige Loesung als richtig erkannt
+- `FN`: richtige Loesung als falsch erkannt
+- `FP`: falsche Loesung als richtig erkannt
+- `TN`: falsche Loesung als falsch erkannt
+- `recall`: `TP / (TP + FN)`
+- `fnr`: `FN / (TP + FN)`
+- `precision`: `TP / (TP + FP)`
+- `specificity`: `TN / (TN + FP)`
+
+Reproduzierbare Berechnung fuer alle Modellordner:
+- Skript: `/Users/wiggel/Python/eKlausur2/build_classification_metrics_all_results.py`
+- Output:
+  - `/Users/wiggel/Python/eKlausur2/Results/classification_metrics_all_results.csv`
+  - `/Users/wiggel/Python/eKlausur2/Results/classification_metrics_all_results.md`

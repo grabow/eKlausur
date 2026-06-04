@@ -1,0 +1,15 @@
+model,source_file,datasets_covered,pages_processed,letters_total,letters_correct,letters_wrong,accuracy_percent,extra_pred_tokens,q_tokens,q_lines,tp,fn,fp,tn,recall,fnr,precision,specificity,classification_accuracy
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,recognition_llm_openrouter_gemini31_flashlite.txt,10,120,510,498,12,97.65,0,10,4,346,11,0,153,0.969188,0.030812,1.000000,1.000000,0.978431
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,recognition_llm_openrouter_gemini31_flashlite_weak_hint_ref.txt,10,120,510,504,6,98.82,0,10,4,354,3,2,151,0.991597,0.008403,0.994382,0.986928,0.990196
+LLM OpenRouter OpenAI GPT-5.2-plain,recognition_llm_openrouter_openai_gpt52_plain.txt,10,120,510,474,36,92.94,0,12,5,333,24,3,150,0.932773,0.067227,0.991071,0.980392,0.947059
+LLM OpenRouter OpenAI GPT-5.2-weak,recognition_llm_openrouter_openai_gpt52_weak_hint_ref.txt,10,120,510,485,25,95.10,0,10,4,349,8,11,142,0.977591,0.022409,0.969444,0.928105,0.962745
+LLM OpenRouter OpenAI GPT-5.5-plain-subset_1_10,recognition_llm_openrouter_openai_gpt55_plain.txt,10,120,510,490,20,96.08,0,11,5,340,17,0,153,0.952381,0.047619,1.000000,1.000000,0.966667
+LLM OpenRouter OpenAI GPT-5.5-weak-subset_1_10,recognition_llm_openrouter_openai_gpt55_weak_hint_ref.txt,10,120,510,449,61,88.04,0,35,5,343,14,33,120,0.960784,0.039216,0.912234,0.784314,0.907843
+LLM OpenRouter Anthropic Claude Opus 4.7-plain-subset_1_10,recognition_llm_openrouter_claude_opus47_plain.txt,10,120,510,495,15,97.06,0,10,4,343,14,0,153,0.960784,0.039216,1.000000,1.000000,0.972549
+LLM OpenRouter Anthropic Claude Opus 4.7-weak-subset_1_10,recognition_llm_openrouter_claude_opus47_weak_hint_ref.txt,10,120,510,478,32,93.73,0,35,8,333,24,1,152,0.932773,0.067227,0.997006,0.993464,0.950980
+LLM OpenRouter xAI Grok-4.3-plain,recognition_llm_grok43_plain.txt,10,120,510,461,49,90.39,6,41,30,319,38,0,153,0.893557,0.106443,1.000000,1.000000,0.925490
+LLM OpenRouter xAI Grok-4.3-weak,recognition_llm_grok43_weak_hint_ref.txt,10,120,510,462,48,90.59,0,22,15,348,9,25,128,0.974790,0.025210,0.932976,0.836601,0.933333
+LLM OpenRouter Qwen3-VL-30B-plain,recognition_llm_qwen3vl30b_plain.txt,10,120,510,457,53,89.61,0,37,11,320,37,2,151,0.896359,0.103641,0.993789,0.986928,0.923529
+LLM OpenRouter Qwen3-VL-30B-weak,recognition_llm_qwen3vl30b_weak_hint_ref.txt,10,120,510,492,18,96.47,0,5,2,355,2,11,142,0.994398,0.005602,0.969945,0.928105,0.974510
+YOLOv5 Medium-plain,recognition_yolov5_medium.txt,10,120,510,465,45,91.18,1,11,10,332,25,0,153,0.929972,0.070028,1.000000,1.000000,0.950980
+YOLO26 Medium-plain,recognition_yolo26_medium.txt,10,120,510,465,45,91.18,3,39,31,321,36,0,153,0.899160,0.100840,1.000000,1.000000,0.929412

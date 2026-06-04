@@ -1,0 +1,22 @@
+model: LLM OpenRouter OpenAI GPT-5.2-weak
+source_file: recognition_llm_openrouter_openai_gpt52_weak_hint_ref.txt
+datasets_expected: 61
+datasets_copied: 61
+pages_processed: 742
+letters_total: 3141
+letters_correct: 3002
+letters_wrong: 139
+accuracy: 0.955747
+accuracy_percent: 95.57
+extra_pred_tokens: 6
+tp: 2367
+fn: 27
+fp: 80
+tn: 667
+recall: 0.988722
+fnr: 0.011278
+precision: 0.967307
+specificity: 0.892905
+provider: openrouter
+provider_model: openai/gpt-5.2
+created_at: 2026-05-18T09:15:39.106460+00:00

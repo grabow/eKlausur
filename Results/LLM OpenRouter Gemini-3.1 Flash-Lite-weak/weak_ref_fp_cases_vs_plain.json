@@ -1,0 +1,123 @@
+[
+  {
+    "dataset_id": 2,
+    "page_idx": 4,
+    "token_idx": 0,
+    "reference": "B",
+    "student": "S",
+    "weak_pred": "B",
+    "plain_pred": "S",
+    "plain_would_be_tn": true,
+    "image": "/Users/wiggel/Python/eKlausur2/data/dataset/2/page_4.jpg"
+  },
+  {
+    "dataset_id": 2,
+    "page_idx": 4,
+    "token_idx": 2,
+    "reference": "A",
+    "student": "O",
+    "weak_pred": "A",
+    "plain_pred": "O",
+    "plain_would_be_tn": true,
+    "image": "/Users/wiggel/Python/eKlausur2/data/dataset/2/page_4.jpg"
+  },
+  {
+    "dataset_id": 11,
+    "page_idx": 4,
+    "token_idx": 0,
+    "reference": "F",
+    "student": "L",
+    "weak_pred": "F",
+    "plain_pred": "L",
+    "plain_would_be_tn": true,
+    "image": "/Users/wiggel/Python/eKlausur2/data/dataset/11/page_4.jpg"
+  },
+  {
+    "dataset_id": 14,
+    "page_idx": 4,
+    "token_idx": 4,
+    "reference": "M",
+    "student": "W",
+    "weak_pred": "M",
+    "plain_pred": "W",
+    "plain_would_be_tn": true,
+    "image": "/Users/wiggel/Python/eKlausur2/data/dataset/14/page_4.jpg"
+  },
+  {
+    "dataset_id": 25,
+    "page_idx": 10,
+    "token_idx": 2,
+    "reference": "E",
+    "student": "J",
+    "weak_pred": "E",
+    "plain_pred": "J",
+    "plain_would_be_tn": true,
+    "image": "/Users/wiggel/Python/eKlausur2/data/dataset/25/page_10.jpg"
+  },
+  {
+    "dataset_id": 28,
+    "page_idx": 4,
+    "token_idx": 0,
+    "reference": "B",
+    "student": "I",
+    "weak_pred": "B",
+    "plain_pred": "I",
+    "plain_would_be_tn": true,
+    "image": "/Users/wiggel/Python/eKlausur2/data/dataset/28/page_4.jpg"
+  },
+  {
+    "dataset_id": 29,
+    "page_idx": 4,
+    "token_idx": 0,
+    "reference": "B",
+    "student": "J",
+    "weak_pred": "B",
+    "plain_pred": "J",
+    "plain_would_be_tn": true,
+    "image": "/Users/wiggel/Python/eKlausur2/data/dataset/29/page_4.jpg"
+  },
+  {
+    "dataset_id": 29,
+    "page_idx": 4,
+    "token_idx": 2,
+    "reference": "A",
+    "student": "L",
+    "weak_pred": "A",
+    "plain_pred": "L",
+    "plain_would_be_tn": true,
+    "image": "/Users/wiggel/Python/eKlausur2/data/dataset/29/page_4.jpg"
+  },
+  {
+    "dataset_id": 29,
+    "page_idx": 4,
+    "token_idx": 4,
+    "reference": "I",
+    "student": "J",
+    "weak_pred": "I",
+    "plain_pred": "J",
+    "plain_would_be_tn": true,
+    "image": "/Users/wiggel/Python/eKlausur2/data/dataset/29/page_4.jpg"
+  },
+  {
+    "dataset_id": 53,
+    "page_idx": 5,
+    "token_idx": 0,
+    "reference": "H",
+    "student": "G",
+    "weak_pred": "H",
+    "plain_pred": "K",
+    "plain_would_be_tn": true,
+    "image": "/Users/wiggel/Python/eKlausur2/data/dataset/53/page_5.jpg"
+  },
+  {
+    "dataset_id": 54,
+    "page_idx": 1,
+    "token_idx": 2,
+    "reference": "M",
+    "student": "B",
+    "weak_pred": "M",
+    "plain_pred": "M",
+    "plain_would_be_tn": false,
+    "image": "/Users/wiggel/Python/eKlausur2/data/dataset/54/page_1.jpg"
+  }
+]

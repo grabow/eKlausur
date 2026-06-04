@@ -1,0 +1,32 @@
+{
+  "purpose": "Repeat and sensitivity runs for stochastic/provider variability.",
+  "recommended_repeats_same_setup": 3,
+  "factors": [
+    {
+      "name": "prompt_index",
+      "values": [
+        0,
+        1
+      ],
+      "type": "sensitivity"
+    },
+    {
+      "name": "provider_model",
+      "values": [
+        "google/gemini-3.1-flash-lite",
+        "google/gemini-3.1-flash-lite-preview"
+      ],
+      "type": "sensitivity"
+    },
+    {
+      "name": "expected_mode",
+      "values": [
+        "none",
+        "studsolution_line"
+      ],
+      "type": "sensitivity"
+    }
+  ],
+  "run_command_template": "/Users/wiggel/Python/eKlausur2/.venv/bin/python /Users/wiggel/Python/eKlausur2/run_llm_recognition.py --dataset-root /Users/wiggel/Python/eKlausur2/data/dataset --provider openrouter --provider-model {provider_model} --prompt-index {prompt_index} --expected-mode {expected_mode} --output-name {output_name}",
+  "analysis_note": "Store each run under a separate model/result folder and rerun this package script per run."
+}

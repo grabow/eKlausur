@@ -1,0 +1,198 @@
+{
+  "run_id": "openrouter_gemini31flashlite_20260507T222409.493799+0000",
+  "created_at_utc": "2026-05-07T22:33:20.492429+00:00",
+  "provider": "openrouter",
+  "provider_model": "google/gemini-3.1-flash-lite",
+  "source_file": "recognition_llm.txt",
+  "dataset_root": "/Users/wiggel/Python/eKlausur2/data/dataset",
+  "dataset_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61
+  ],
+  "prompt_index": 0,
+  "expected_mode": "none",
+  "prompt_text": "\nTask: Read only the answer table and return exactly one JSON object.\n\nOutput keys:\n- column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, danger\n- Optional: page_number\n\nPer column_i:\n- digit must be exactly i or \"(no digit)\".\n- letter must be a single uppercase letter A-Z or \"(no letter)\".\n- If digit is \"(no digit)\", set letter to \"(no letter)\".\n\nRules:\n- Prefer handwritten uppercase block letters.\n- If a letter in a column is crossed out, use the replacement letter above or below if clearly intended.\n- Ignore unrelated text outside the table.\n- Set danger to true if any column is uncertain, else false.\n\nReturn only valid JSON.\nNo markdown.\nNo explanation.\nNo additional keys.\n",
+  "hyperparameters": {
+    "temperature": null,
+    "top_p": null,
+    "seed": null,
+    "response_format": "schema (with automatic fallback where unsupported)"
+  },
+  "preprocessing": {
+    "location": "recognizer.copy_blurr_resize",
+    "steps": [
+      "grayscale read",
+      "resize longest dimension to 1152 px",
+      "cv2.INTER_LINEAR",
+      "no gaussian blur applied (commented out)",
+      "no inversion applied (commented out)"
+    ]
+  },
+  "software": {
+    "python": "3.9.6 (default, Oct  4 2024, 08:01:31) ",
+    "run_script": "/Users/wiggel/Python/eKlausur2/run_llm_recognition.py",
+    "llm_root": "/Users/wiggel/Python/llm/llm"
+  },
+  "hardware": {
+    "platform": "macOS-14.8-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "python_version": "3.9.6 (default, Oct  4 2024, 08:01:31) ",
+    "cpu_brand": "Apple M1 Max",
+    "memory_bytes": "68719476736",
+    "memory_gb": "64.00"
+  },
+  "run_time_estimate_from_prediction_file_mtime": {
+    "start_epoch_s": 1778190466.4657867,
+    "end_epoch_s": 1778192530.8848722,
+    "approx_wallclock_seconds": 2064.4190855026245,
+    "throughput_pages_per_second": 0.3594231448501384,
+    "mtime_source": "data/dataset",
+    "note": "approximation from prediction file mtimes; run log based timing is preferred"
+  },
+  "run_log": null,
+  "avg_request_latency_seconds_from_log": null,
+  "usage_from_log": {
+    "prompt_tokens_total": null,
+    "completion_tokens_total": null,
+    "total_tokens_total": null
+  },
+  "openrouter_model_metadata": {
+    "id": "google/gemini-3.1-flash-lite",
+    "canonical_slug": "google/gemini-3.1-flash-lite-20260507",
+    "hugging_face_id": null,
+    "name": "Google: Gemini 3.1 Flash Lite",
+    "created": 1778168828,
+    "description": "Gemini 3.1 Flash Lite is Google’s GA high-efficiency multimodal model optimized for low-latency, high-volume workloads. It supports text, image, video, audio, and PDF inputs, and is designed for lightweight agentic...",
+    "context_length": 1048576,
+    "architecture": {
+      "modality": "text+image+file+audio+video->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "video",
+        "file",
+        "audio"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Gemini",
+      "instruct_type": null
+    },
+    "pricing": {
+      "prompt": "0.00000025",
+      "completion": "0.0000015",
+      "image": "0.00000025",
+      "audio": "0.0000005",
+      "web_search": "0.014",
+      "internal_reasoning": "0.0000015",
+      "input_cache_read": "0.000000025",
+      "input_cache_write": "0.00000008333333333333334"
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "is_moderated": false
+    },
+    "per_request_limits": null,
+    "supported_parameters": [
+      "include_reasoning",
+      "max_tokens",
+      "reasoning",
+      "response_format",
+      "seed",
+      "stop",
+      "structured_outputs",
+      "temperature",
+      "tool_choice",
+      "tools",
+      "top_p"
+    ],
+    "default_parameters": {
+      "temperature": null,
+      "top_p": null,
+      "top_k": null,
+      "frequency_penalty": null,
+      "presence_penalty": null,
+      "repetition_penalty": null
+    },
+    "supported_voices": null,
+    "knowledge_cutoff": null,
+    "expiration_date": null,
+    "links": {
+      "details": "/api/v1/models/google/gemini-3.1-flash-lite-20260507/endpoints"
+    }
+  },
+  "costing": {
+    "prompt_price_per_token_usd": 2.5e-07,
+    "completion_price_per_token_usd": 1.5e-06,
+    "prompt_tokens_total": null,
+    "completion_tokens_total": null,
+    "estimated_total_cost_usd": null,
+    "note": "Either pass --prompt-tokens/--completion-tokens or provide --run-log with usage lines to compute exact cost. Without token counts, only price coefficients are recorded.",
+    "sources": {
+      "openrouter_models_endpoint": "https://openrouter.ai/api/v1/models",
+      "openrouter_chat_completion_usage_doc": "https://openrouter.ai/docs/api-reference/chat-completion"
+    }
+  }
+}

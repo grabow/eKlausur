@@ -14,6 +14,8 @@ For each data/dataset/<id>/ with studSolution.txt:
 from __future__ import annotations
 
 import argparse
+import contextlib
+import io
 import json
 import os
 import re
@@ -25,6 +27,7 @@ from typing import Iterable, List, Tuple
 
 
 PAGE_RE = re.compile(r"^page_(\d+)\.jpg$", re.IGNORECASE)
+RESULT_LIST_RE = re.compile(r"\[(.*)\]")
 
 
 def parse_args() -> argparse.Namespace:
@@ -55,7 +58,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--prompt-index", type=int, default=0, help="Prompt index passed to recognizer.recognize(...).")
     p.add_argument(
         "--expected-mode",
-        choices=["none", "studsolution_line"],
+        choices=["none", "studsolution_line", "reference_line"],
         default="none",
         help="Optional expected-hint mode passed to recognizer.",
     )
@@ -70,6 +73,18 @@ def parse_args() -> argparse.Namespace:
         "--log-file",
         default=None,
         help="Optional recognizer log file path (forwarded via recognizer.set_log_file).",
+    )
+    p.add_argument(
+        "--suppress-recognizer-stdout",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Suppress verbose recognizer stdout (prompt/timing prints). Default: true.",
+    )
+    p.add_argument(
+        "--print-page-results",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Print recognized tokens per page. In expected modes also prints suggested tokens. Default: true.",
     )
     p.add_argument(
         "--env-file",
@@ -121,6 +136,59 @@ def normalize_letter(raw: str | None, fail_token: str) -> str:
     if len(value) == 1 and value.isalpha():
         return value.upper()
     return fail_token
+
+
+def tokenize_line(line: str) -> List[str]:
+    return [t.strip().upper() for t in line.strip().split() if t.strip()]
+
+
+def parse_result_list_line(line: str) -> List[str]:
+    m = RESULT_LIST_RE.search(line)
+    if not m:
+        return []
+    inner = m.group(1).strip()
+    if not inner:
+        return []
+    return [t.strip().strip("'\"").upper() for t in inner.split(",")]
+
+
+def build_reference_expected_lines(result_path: Path, stud_lines: List[str]) -> List[str]:
+    """
+    Build per-line expected hints from result.txt Referenz-Loesung.
+    The flat reference token stream is split using studSolution line lengths to stay line-aligned.
+    """
+    if not result_path.exists():
+        raise FileNotFoundError(f"result.txt not found for reference_line mode: {result_path}")
+
+    ref_flat: List[str] = []
+    lines = result_path.read_text(encoding="utf-8").splitlines()
+    i = 0
+    while i < len(lines):
+        if lines[i].strip().startswith("Referenz-Lösung"):
+            j = i + 1
+            while j < len(lines) and "Lösung:" not in lines[j]:
+                j += 1
+            if j < len(lines):
+                ref_flat.extend(parse_result_list_line(lines[j]))
+            i = j
+        i += 1
+
+    expected_lines: List[str] = []
+    idx = 0
+    for stud_line in stud_lines:
+        n = len(tokenize_line(stud_line))
+        if n <= 0:
+            expected_lines.append("")
+            continue
+        chunk = ref_flat[idx:idx + n]
+        if len(chunk) < n:
+            raise RuntimeError(
+                f"Not enough reference tokens in {result_path}. "
+                f"Need {n} at line idx {len(expected_lines)}, got {len(chunk)}."
+            )
+        expected_lines.append(" ".join(chunk))
+        idx += n
+    return expected_lines
 
 
 def parse_items_json(res_json: str, fail_token: str) -> List[str]:
@@ -265,9 +333,13 @@ def main() -> int:
         if not page_images:
             continue
 
-        stud_lines: List[str] = []
-        if args.expected_mode == "studsolution_line":
+        expected_lines: List[str] = []
+        if args.expected_mode in ("studsolution_line", "reference_line"):
             stud_lines = stud_solution_path.read_text(encoding="utf-8").splitlines()
+            if args.expected_mode == "studsolution_line":
+                expected_lines = stud_lines
+            else:
+                expected_lines = build_reference_expected_lines(dataset_dir / "result.txt", stud_lines)
 
         out_lines: List[str] = []
         for page_path in page_images:
@@ -275,8 +347,8 @@ def main() -> int:
                 m = PAGE_RE.match(page_path.name)
                 page_idx = int(m.group(1)) if m else 0
                 expected = None
-                if args.expected_mode == "studsolution_line" and page_idx < len(stud_lines):
-                    expected = stud_lines[page_idx]
+                if args.expected_mode in ("studsolution_line", "reference_line") and page_idx < len(expected_lines):
+                    expected = expected_lines[page_idx]
 
                 with tempfile.TemporaryDirectory(prefix="llm_page_") as tmp_dir_str:
                     tmp_dir = Path(tmp_dir_str)
@@ -285,15 +357,34 @@ def main() -> int:
                     src_temp = temp_subdir / "page_0.jpeg"
                     shutil.copyfile(page_path, src_temp)
 
-                    preproc_path = recognizer.copy_blurr_resize(str(tmp_dir), "Temp", "page_0.jpeg")
-                    res_json = recognizer.recognize(
-                        preproc_path,
-                        expected=expected,
-                        model=args.provider,
-                        prompt=args.prompt_index,
-                    )
+                    if args.suppress_recognizer_stdout:
+                        with contextlib.redirect_stdout(io.StringIO()):
+                            preproc_path = recognizer.copy_blurr_resize(str(tmp_dir), "Temp", "page_0.jpeg")
+                            res_json = recognizer.recognize(
+                                preproc_path,
+                                expected=expected,
+                                model=args.provider,
+                                prompt=args.prompt_index,
+                            )
+                    else:
+                        preproc_path = recognizer.copy_blurr_resize(str(tmp_dir), "Temp", "page_0.jpeg")
+                        res_json = recognizer.recognize(
+                            preproc_path,
+                            expected=expected,
+                            model=args.provider,
+                            prompt=args.prompt_index,
+                        )
                 letters = parse_items_json(res_json, args.fail_token)
                 out_lines.append(" ".join(letters))
+                if args.print_page_results:
+                    recognized = " ".join(letters)
+                    if expected is not None:
+                        print(
+                            f"[PAGE] {dataset_dir.name}/{page_path.name} "
+                            f"suggested='{expected}' recognized='{recognized}'"
+                        )
+                    else:
+                        print(f"[PAGE] {dataset_dir.name}/{page_path.name} recognized='{recognized}'")
 
                 if raw_json_root is not None:
                     raw_out = raw_json_root / dataset_dir.name / f"{page_path.stem}.json"

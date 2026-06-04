@@ -1,0 +1,12 @@
+dataset_id,page_idx,token_idx,reference,student,weak_pred,plain_pred,plain_would_be_tn,image
+2,4,0,B,S,B,S,True,/Users/wiggel/Python/eKlausur2/data/dataset/2/page_4.jpg
+2,4,2,A,O,A,O,True,/Users/wiggel/Python/eKlausur2/data/dataset/2/page_4.jpg
+11,4,0,F,L,F,L,True,/Users/wiggel/Python/eKlausur2/data/dataset/11/page_4.jpg
+14,4,4,M,W,M,W,True,/Users/wiggel/Python/eKlausur2/data/dataset/14/page_4.jpg
+25,10,2,E,J,E,J,True,/Users/wiggel/Python/eKlausur2/data/dataset/25/page_10.jpg
+28,4,0,B,I,B,I,True,/Users/wiggel/Python/eKlausur2/data/dataset/28/page_4.jpg
+29,4,0,B,J,B,J,True,/Users/wiggel/Python/eKlausur2/data/dataset/29/page_4.jpg
+29,4,2,A,L,A,L,True,/Users/wiggel/Python/eKlausur2/data/dataset/29/page_4.jpg
+29,4,4,I,J,I,J,True,/Users/wiggel/Python/eKlausur2/data/dataset/29/page_4.jpg
+53,5,0,H,G,H,K,True,/Users/wiggel/Python/eKlausur2/data/dataset/53/page_5.jpg
+54,1,2,M,B,M,M,False,/Users/wiggel/Python/eKlausur2/data/dataset/54/page_1.jpg

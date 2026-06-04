@@ -1,0 +1,22 @@
+model: YOLO26 Medium-plain
+source_file: recognition_yolo26_medium.txt
+datasets_expected: 61
+datasets_copied: 61
+pages_processed: 742
+letters_total: 3141
+letters_correct: 2801
+letters_wrong: 340
+accuracy: 0.891754
+accuracy_percent: 89.18
+extra_pred_tokens: 6
+tp: 2153
+fn: 241
+fp: 1
+tn: 746
+recall: 0.899332
+fnr: 0.100668
+precision: 0.999536
+specificity: 0.998661
+provider: local
+provider_model: yolo26-medium
+created_at: 2026-05-18T09:15:51.732102+00:00

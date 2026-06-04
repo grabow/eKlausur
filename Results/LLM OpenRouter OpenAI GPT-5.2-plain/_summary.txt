@@ -1,0 +1,22 @@
+model: LLM OpenRouter OpenAI GPT-5.2-plain
+source_file: recognition_llm_openrouter_openai_gpt52_plain.txt
+datasets_expected: 61
+datasets_copied: 61
+pages_processed: 742
+letters_total: 3141
+letters_correct: 2939
+letters_wrong: 202
+accuracy: 0.935689
+accuracy_percent: 93.57
+extra_pred_tokens: 0
+tp: 2250
+fn: 144
+fp: 5
+tn: 742
+recall: 0.939850
+fnr: 0.060150
+precision: 0.997783
+specificity: 0.993307
+provider: openrouter
+provider_model: openai/gpt-5.2
+created_at: 2026-05-21T14:21:39.001896+00:00

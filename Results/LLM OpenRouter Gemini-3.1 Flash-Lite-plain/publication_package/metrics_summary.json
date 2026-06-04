@@ -1,0 +1,15 @@
+{
+  "pages_processed": 742,
+  "letters_total": 3141,
+  "letters_correct": 3066,
+  "letters_wrong": 75,
+  "accuracy": 0.9761222540592168,
+  "accuracy_percent": 97.61222540592168,
+  "ci95_wilson_low": 0.9701731673125706,
+  "ci95_wilson_high": 0.9809081208515138,
+  "error_breakdown": {
+    "substitutions": 75,
+    "deletions": 0,
+    "insertions": 7
+  }
+}

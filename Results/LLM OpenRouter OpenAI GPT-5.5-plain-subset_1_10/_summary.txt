@@ -1,0 +1,22 @@
+model: LLM OpenRouter OpenAI GPT-5.5-plain-subset_1_10
+source_file: recognition_llm_openrouter_openai_gpt55_plain.txt
+datasets_expected: 61
+datasets_copied: 10
+pages_processed: 120
+letters_total: 510
+letters_correct: 490
+letters_wrong: 20
+accuracy: 0.960784
+accuracy_percent: 96.08
+extra_pred_tokens: 0
+tp: 340
+fn: 17
+fp: 0
+tn: 153
+recall: 0.952381
+fnr: 0.047619
+precision: 1.000000
+specificity: 1.000000
+provider: openrouter
+provider_model: openai/gpt-5.5
+created_at: 2026-05-21T14:21:38.975219+00:00

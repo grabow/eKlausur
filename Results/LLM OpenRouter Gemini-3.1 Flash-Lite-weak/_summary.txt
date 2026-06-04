@@ -1,0 +1,22 @@
+model: LLM OpenRouter Gemini-3.1 Flash-Lite-weak
+source_file: recognition_llm_openrouter_gemini31_flashlite_weak_hint_ref.txt
+datasets_expected: 61
+datasets_copied: 61
+pages_processed: 742
+letters_total: 3141
+letters_correct: 3090
+letters_wrong: 51
+accuracy: 0.983763
+accuracy_percent: 98.38
+extra_pred_tokens: 7
+tp: 2380
+fn: 14
+fp: 11
+tn: 736
+recall: 0.994152
+fnr: 0.005848
+precision: 0.995399
+specificity: 0.985274
+provider: openrouter
+provider_model: google/gemini-3.1-flash-lite
+created_at: 2026-05-18T09:15:38.990643+00:00

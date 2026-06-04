@@ -1,0 +1,11 @@
+model,substitutions,deletions,insertions
+LLM OpenRouter Gemini-3.1 Flash-Lite-plain,75,0,7
+LLM OpenRouter Gemini-3.1 Flash-Lite-weak,51,0,7
+LLM OpenRouter OpenAI GPT-5.2-plain,194,11,0
+LLM OpenRouter OpenAI GPT-5.2-weak,139,0,6
+LLM OpenRouter Qwen3-VL-30B-plain,196,20,0
+LLM OpenRouter Qwen3-VL-30B-weak,104,0,0
+LLM OpenRouter xAI Grok-4.3-plain,326,1,7
+LLM OpenRouter xAI Grok-4.3-weak,311,0,12
+YOLO26 Medium-plain,338,2,6
+YOLOv5 Medium-plain,283,2,24

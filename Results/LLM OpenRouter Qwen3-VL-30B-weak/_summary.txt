@@ -1,0 +1,22 @@
+model: LLM OpenRouter Qwen3-VL-30B-weak
+source_file: recognition_llm_qwen3vl30b_weak_hint_ref.txt
+datasets_expected: 61
+datasets_copied: 61
+pages_processed: 742
+letters_total: 3141
+letters_correct: 3037
+letters_wrong: 104
+accuracy: 0.966890
+accuracy_percent: 96.69
+extra_pred_tokens: 0
+tp: 2357
+fn: 37
+fp: 32
+tn: 715
+recall: 0.984545
+fnr: 0.015455
+precision: 0.986605
+specificity: 0.957162
+provider: openrouter
+provider_model: qwen/qwen3-vl-30b-a3b
+created_at: 2026-05-18T09:15:51.640322+00:00
