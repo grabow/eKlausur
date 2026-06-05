@@ -1,0 +1,22 @@
+model: LLM Google Gemini-3.5 Flash-weak
+source_file: recognition_llm_gemini35_flash_google_weak_hint_ref.txt
+datasets_expected: 61
+datasets_copied: 61
+pages_processed: 742
+letters_total: 3141
+letters_correct: 3085
+letters_wrong: 56
+accuracy: 0.982171
+accuracy_percent: 98.22
+extra_pred_tokens: 0
+tp: 2382
+fn: 12
+fp: 16
+tn: 731
+recall: 0.994987
+fnr: 0.005013
+precision: 0.993328
+specificity: 0.978581
+provider: gemini
+provider_model: gemini-3.5-flash
+created_at: 2026-06-05T20:05:31.940686+00:00

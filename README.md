@@ -20,20 +20,24 @@ Methodische Referenz:
   - `/Users/wiggel/Python/eKlausur2/.env`
   - `run_llm_recognition.py` nutzt ausschliesslich `.env` (kein `credentials.txt`-Fallback)
 
-## Gemini 3.5 Flash - bekannte Falle
+## Gemini 3.5 Flash - Provider-Hinweise (Stand 2026-06-05)
 
-- Beobachtung (reproduziert):
-  - Bei `provider=gemini` + `model=gemini-3.5-flash` kann dieselbe Seite je nach Bildvariante unterschiedlich reagieren:
-    - Originalbild (z. B. `data/dataset/10/page_1.jpg`) antwortet normal.
-    - Vorverarbeitetes Bild aus `copy_blurr_resize(...)` kann in API-Calls auf `Read timed out (60s)` laufen.
-- Wichtig:
-  - Das ist nicht automatisch ein Prompt-/Schema-Fehler.
-  - In diesem Fall endet der Request als `None`, wodurch `run_llm_recognition.py` ein `?` schreibt.
-- Standard-Vorgehen fuer kuenftige Tests:
-  - Bei Gemini 3.5 Flash zuerst mit Originalbild gegenpruefen (ohne Preprocessing).
-  - Timeouts separat als Transport/Provider-Thema behandeln, nicht als OCR-Inhaltsfehler.
-  - Bei Publikationsvergleichen Protokoll klar kennzeichnen:
-    - `plain/common preprocessing` vs. `provider-native robust`.
+- Aktueller Stand: Der frueher beobachtete `Read timed out (60s)` bei `provider=gemini` +
+  `gemini-3.5-flash` auf vorverarbeiteten Bildern ist **aktuell nicht mehr reproduzierbar**.
+  Ein voller Google-direct-Lauf (61/61, plain + weak) lief sauber durch (~0.9 % `?`).
+  Der Timeout war offenbar ein transientes Transport-/Provider-Problem.
+- OpenRouter dagegen (`google/gemini-3.5-flash`): **kein** Timeout, aber gehaeufte
+  Seitenausfaelle mit `Antwort ist kein parsebares JSON-Objekt` (Schema-Compliance) ->
+  kuenstlich erhoehte `?`-Rate (ca. doppelt so hoch wie Google-direct). Verfaelscht den Vergleich.
+- Empfehlung: Gemini 3.5 Flash fuer Publikationslaeufe ueber **Google-direct** (`--provider gemini`)
+  fahren, nicht ueber OpenRouter.
+- Allgemein bei `None`-Antworten: nicht automatisch als OCR-Inhaltsfehler werten; Transport-/
+  Schema-Probleme separat behandeln. Komplette `?`-Zeilen mit lesbarem Ground Truth sind ein
+  Indikator fuer Provider-Ausfall (siehe Abbruch-Guard in den Runnern + `check_openrouter_credit.py`).
+
+- Ergebnis (61/61): Gemini 3.5 Flash ist statistisch gleichauf mit 3.1 Flash-Lite
+  (weak 98.22 % vs 98.38 %, CIs ueberlappen) -> die neuere Flash-Generation bringt fuer diese
+  Aufgabe keinen belastbaren Vorteil.
 
 ## Doku
 

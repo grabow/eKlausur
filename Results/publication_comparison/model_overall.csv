@@ -1,9 +1,11 @@
 model,source_file,datasets_copied,pages_processed,letters_total,letters_correct,letters_wrong,extra_pred_tokens,accuracy,accuracy_percent,ci95_low,ci95_high
+LLM Google Gemini-3.5 Flash-plain,recognition_llm_gemini35_flash_google_plain.txt,61,742,3141,3071,70,0,0.977714,97.77,0.971939,0.982323
+LLM Google Gemini-3.5 Flash-weak,recognition_llm_gemini35_flash_google_weak_hint_ref.txt,61,742,3141,3085,56,0,0.982171,98.22,0.976920,0.986245
 LLM OpenRouter Gemini-3.1 Flash-Lite-plain,recognition_llm_openrouter_gemini31_flashlite.txt,61,742,3141,3066,75,7,0.976122,97.61,0.970173,0.980908
 LLM OpenRouter Gemini-3.1 Flash-Lite-weak,recognition_llm_openrouter_gemini31_flashlite_weak_hint_ref.txt,61,742,3141,3090,51,7,0.983763,98.38,0.978716,0.987629
 LLM OpenRouter OpenAI GPT-5.2-plain,recognition_llm_openrouter_openai_gpt52_plain.txt,61,742,3141,2939,202,0,0.935689,93.57,0.926567,0.943747
 LLM OpenRouter OpenAI GPT-5.2-weak,recognition_llm_openrouter_openai_gpt52_weak_hint_ref.txt,61,742,3141,3002,139,6,0.955747,95.57,0.947980,0.962399
-LLM OpenRouter Qwen3-VL-30B-plain,recognition_llm_qwen3vl30b_plain.txt,61,742,3141,2925,216,0,0.931232,93.12,0.921845,0.939566
+LLM OpenRouter Qwen3-VL-30B-plain,recognition_llm_qwen3vl30b_plain.txt,61,742,3141,2950,191,0,0.939191,93.92,0.930285,0.947025
 LLM OpenRouter Qwen3-VL-30B-weak,recognition_llm_qwen3vl30b_weak_hint_ref.txt,61,742,3141,3037,104,0,0.966890,96.69,0.960040,0.972599
 LLM OpenRouter xAI Grok-4.3-plain,recognition_llm_grok43_plain.txt,61,742,3141,2814,327,7,0.895893,89.59,0.884725,0.906094
 LLM OpenRouter xAI Grok-4.3-weak,recognition_llm_grok43_weak_hint_ref.txt,61,742,3141,2830,311,12,0.900987,90.10,0.890047,0.910948

@@ -20,6 +20,8 @@ class ModelSpec:
 MODELS: List[ModelSpec] = [
     ModelSpec("LLM OpenRouter Gemini-3.1 Flash-Lite-plain", "recognition_llm_openrouter_gemini31_flashlite.txt"),
     ModelSpec("LLM OpenRouter Gemini-3.1 Flash-Lite-weak", "recognition_llm_openrouter_gemini31_flashlite_weak_hint_ref.txt"),
+    ModelSpec("LLM Google Gemini-3.5 Flash-plain", "recognition_llm_gemini35_flash_google_plain.txt"),
+    ModelSpec("LLM Google Gemini-3.5 Flash-weak", "recognition_llm_gemini35_flash_google_weak_hint_ref.txt"),
     ModelSpec("LLM OpenRouter OpenAI GPT-5.2-plain", "recognition_llm_openrouter_openai_gpt52_plain.txt"),
     ModelSpec("LLM OpenRouter OpenAI GPT-5.2-weak", "recognition_llm_openrouter_openai_gpt52_weak_hint_ref.txt"),
     ModelSpec("LLM OpenRouter OpenAI GPT-5.5-plain-subset_1_10", "recognition_llm_openrouter_openai_gpt55_plain.txt"),
@@ -262,6 +264,8 @@ def main() -> int:
     premium_focus = [
         "LLM OpenRouter Gemini-3.1 Flash-Lite-plain",
         "LLM OpenRouter Gemini-3.1 Flash-Lite-weak",
+        "LLM Google Gemini-3.5 Flash-plain",
+        "LLM Google Gemini-3.5 Flash-weak",
         "LLM OpenRouter OpenAI GPT-5.2-plain",
         "LLM OpenRouter OpenAI GPT-5.2-weak",
         "LLM OpenRouter OpenAI GPT-5.5-plain-subset_1_10",

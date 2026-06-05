@@ -1,0 +1,22 @@
+model: LLM Google Gemini-3.5 Flash-plain
+source_file: recognition_llm_gemini35_flash_google_plain.txt
+datasets_expected: 61
+datasets_copied: 61
+pages_processed: 742
+letters_total: 3141
+letters_correct: 3071
+letters_wrong: 70
+accuracy: 0.977714
+accuracy_percent: 97.77
+extra_pred_tokens: 0
+tp: 2346
+fn: 48
+fp: 1
+tn: 746
+recall: 0.979950
+fnr: 0.020050
+precision: 0.999574
+specificity: 0.998661
+provider: gemini
+provider_model: gemini-3.5-flash
+created_at: 2026-06-05T20:05:31.882548+00:00
